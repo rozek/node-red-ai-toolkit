@@ -4,6 +4,10 @@ a collection of Node-RED nodes and flows for interactive low-code development of
 applications using AI technologies - free of charge and even for beginners or 
 casual programmers
 
+> this repository should currently be considered as "work-in-progress". It's the author's contribution to the [Backdrop Build](https://backdropbuild.com/) contest which means that it is planned to be "shipped" in the beginning of December 2023.
+
+> Just a small note: if you like this work and plan to use it, consider "starring" this repository (you will find the "Star" button on the top right of this page), so that I know which of my repositories to take most care of.
+
 ## Overview ##
 
 From [Wikipedia](https://en.wikipedia.org/wiki/Node-RED): "_Node-RED is a flow-based, low-code development tool for visual programming developed [...] for wiring together hardware devices, APIs and online services_" (nota bene: just as "hardware devices" are not required, the creation of "online services" is also not mandatory, Node-RED is pretty universal)
