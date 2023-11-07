@@ -16,7 +16,7 @@ Based on Node-RED, the "node-red-ai-toolkit" is a collection of Node-RED nodes a
 
 and you are done!
 
-### It's Part of an Ecosystem ###
+### It's Part of a free Ecosystem ###
 
 Since real-world applications need more than just a few AI functions, the nodes from this toolkit fit seemlessly into a complete eco-system of further nodes, such as
 
@@ -28,11 +28,15 @@ Since real-world applications need more than just a few AI functions, the nodes 
 * [node-red-contact-form-examples](https://github.com/rozek/node-red-contact-form-examples) - two examples for (GDPR-compliant) contact forms (for arbitrary users) and feedback forms (for authenticated users)
 * [node-red-flow-brave](https://github.com/rozek/node-red-flow-brave), [node-red-flow-startpage](https://github.com/rozek/node-red-flow-startpage) - flows which allow you to run internet searches and parse their findings
 
-### Deployment - Shipping for Users ###
+### Deployment - for free ###
 
 And, if you plan to publish your application for other people to use it, you may be interested in
 
 * [node-red-on-always-free-vm](https://github.com/rozek/node-red-on-always-free-vm), a set of instructions how to install a Node-RED server on an Oracle "Always-Free" VM (a program that gives you two small machines reachable from the internet all around the clock (24/7) for free, without ads or other nag-ware)
+
+For deployment, you may replace the web server from one of the above examples by another one based on Node.js with Express (which still allows you to modify its behaviour without too much effort). in that case, you may consider
+
+* [node-red-within-express](https://github.com/rozek/node-red-within-express) - an HTTP(S) server with embedded Node-RED instance
 
 
 
