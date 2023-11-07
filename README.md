@@ -16,12 +16,17 @@ Based on Node-RED, the "node-red-ai-toolkit" is a collection of Node-RED nodes a
 
 and you are done!
 
+### An Ecosystem ###
+
 Since real-world applications need more than just a few AI functions, the nodes from this toolkit fit seemlessly into a complete eco-system of further nodes, such as
 
 * [node-red-http-endpoint-examples](https://github.com/rozek/node-red-http-endpoint-examples) - use these to learn how to create service "endpoints" which can be reached, e.g., over the internet
 * [node-red-authorization-examples](https://github.com/rozek/node-red-authorization-examples) - often, you want your users to authenticate themselves - these examples show you how to achieve this
+* [node-red-web-server-examples](https://github.com/rozek/node-red-web-server-examples) - most often, your AI services go along with a web-server which serves associated web pages, input forms or just files. If you do not want to install a separate web server, you may just import one of these examples to add an open or closed web server
 * [node-red-contact-form-examples](https://github.com/rozek/node-red-contact-form-examples) - two examples for (GDPR-compliant) contact forms (for arbitrary users) and feedback forms (for authenticated users)
 * [node-red-flow-brave](https://github.com/rozek/node-red-flow-brave), [node-red-flow-startpage](https://github.com/rozek/node-red-flow-startpage) - flows which allow you to run internet searches and parse their findings
+
+### Deployment - Shipping for Users ###
 
 And, if you plan to publish your application for other people to use it, you may be interested in
 
