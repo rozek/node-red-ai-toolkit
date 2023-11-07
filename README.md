@@ -8,7 +8,7 @@ casual programmers
 
 > Just a small note: if you like this work and plan to use it, consider "starring" this repository (you will find the "Star" button on the top right of this page), so that I know which of my repositories to take most care of.
 
-If you would like to support my work for Node-RED in the public domain, you may consider to <a href="https://www.buymeacoffee.com/andreasrozek" target="_blank" style="vertical-align:middle"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 30px !important;width: 109px !important;" ></a>
+If you would like to support my work for Node-RED in the public domain, you may consider to <a href="https://www.buymeacoffee.com/andreasrozek" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height:30px !important;width:109px !important;vertical-align:middle" ></a>
 
 ## Overview ##
 
