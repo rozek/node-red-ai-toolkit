@@ -16,7 +16,7 @@ Based on Node-RED, the "node-red-ai-toolkit" is a collection of Node-RED nodes a
 
 and you are done!
 
-### An Ecosystem ###
+### Its Part of an Ecosystem ###
 
 Since real-world applications need more than just a few AI functions, the nodes from this toolkit fit seemlessly into a complete eco-system of further nodes, such as
 
