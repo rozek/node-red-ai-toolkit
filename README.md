@@ -32,6 +32,8 @@ Since real-world applications need more than just a few AI functions, the nodes 
 * [node-red-contact-form-examples](https://github.com/rozek/node-red-contact-form-examples) - two examples for (GDPR-compliant) contact forms (for arbitrary users) and feedback forms (for authenticated users)
 * [node-red-flow-brave](https://github.com/rozek/node-red-flow-brave), [node-red-flow-startpage](https://github.com/rozek/node-red-flow-startpage) - flows which allow you to run internet searches and parse their findings
 
+Beside those mentioned above, you may also add any other Node-RED node and/or flow for your application - just browse the [Node-RED Library](https://flows.nodered.org/) and choose whatever seems to fit best
+
 ### Deploy it on the Internet - for free ###
 
 And, if you plan to publish your application for other people to use it, you may be interested in
