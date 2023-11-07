@@ -6,7 +6,7 @@ casual programmers
 
 ## Overview ##
 
-From [Wikipedia](https://en.wikipedia.org/wiki/Node-RED): "Node-RED is a flow-based, low-code development tool for visual programming developed [...] for wiring together hardware devices, APIs and online services" (nota bene: just as "hardware devices" are not required, the creation of "online services" is not mandatory)
+From [Wikipedia](https://en.wikipedia.org/wiki/Node-RED): "_Node-RED is a flow-based, low-code development tool for visual programming developed [...] for wiring together hardware devices, APIs and online services_" (nota bene: just as "hardware devices" are not required, the creation of "online services" is not mandatory)
 
 Based on Node-RED, the "node-red-ai-toolkit" is a collection of Node-RED nodes and flows that help building AI-based applications: just
 
