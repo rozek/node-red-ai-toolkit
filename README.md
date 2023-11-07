@@ -6,7 +6,7 @@ casual programmers
 
 > this repository should currently be considered as "work-in-progress". It's the author's contribution to the [Backdrop Build](https://backdropbuild.com/) contest which means that it is planned to be "shipped" in the beginning of December 2023.
 
-If you would like to support my work for Node-RED in the public domain, you may consider [buying me a coffee](https://www.buymeacoffee.com/andreasrozek)
+If you would like to support my work for Node-RED in the public domain, you may consider to <a href="https://www.buymeacoffee.com/andreasrozek" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 > Just a small note: if you like this work and plan to use it, consider "starring" this repository (you will find the "Star" button on the top right of this page), so that I know which of my repositories to take most care of.
 
