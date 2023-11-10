@@ -18,6 +18,18 @@ For text-based applications, use existing GPT and/or RWKV models or train or fin
 
 Run the chosen AI models either locally or use an AI service provider over the internet.
 
+### Why should you care? ###
+
+This project is for you if you
+
+* want to experiment with AI technologies or
+* have an idea for an applications based on AI (or using AI functionalities)
+
+but
+
+* only have moderate knowledge of programming (or just limited time) and/or
+* don't want to spend money or want your data to leave your machine.
+
 > this repository should currently be considered as "work-in-progress". It's the author's contribution to the [Backdrop Build](https://backdropbuild.com/) contest which means that it is planned to be "shipped" in the beginning of December 2023.
 
 > Just a small note: if you like this work and plan to use it, consider "starring" this repository (you will find the "Star" button on the top right of this page), so that I know which of my repositories to take most care of.
