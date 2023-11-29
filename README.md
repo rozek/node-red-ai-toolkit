@@ -124,6 +124,25 @@ and copy them into the Node-RED "User Directory" (by default, this folder is loc
 
 ### Language Models ###
 
+You should now choose one or multiple language models and download them as described in their repositories (you _may_ als import the flows for the chosen LLMs, but don't have to):
+
+* [Dans-TotSirocco-7B](https://github.com/rozek/node-red-flow-dans-totsirocco-7b)
+* [StableLM-3B-4E1T](https://github.com/rozek/node-red-flow-stablelm-3b-4e1t)
+* [StableCode-Completion-Alpha-3B-4K](https://github.com/rozek/node-red-flow-stablecode-completion-alpha-3b-4k)
+
+In principle, any LLaMA.cpp compatible model should work, a nice choice could also be
+
+* [42dot_LLM-SFT-1.3B](https://huggingface.co/rozek/42dot_LLM-SFT-1.3B_GGUF) (use the Q8_0 quantization)
+
+## Toolkit Flows ##
+
+Finally import the contents of file [](https://raw.githubusercontent.com/rozek/node-red-ai-toolkit/master/Toolkit-Flows.json) into a new worksheet.
+
+After deployment, you may change the internals of the "configure" flow, redeploy and use any of the "Convenience Functions for Inpsection and Test" to play with the already existing nodes.
+
+## Chatbot Example ##
+
+For a small demonstrator, you may import the flows of a [node-red-uibilder-chatbot](https://github.com/rozek/node-red-uibilder-chatbot)
 
 ## License ##
 
