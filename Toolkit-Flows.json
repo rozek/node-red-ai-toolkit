@@ -946,66 +946,6 @@
         "wires": []
     },
     {
-        "id": "5248a8427f232978",
-        "type": "inject",
-        "z": "a38a9db5ce759685",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 420,
-        "y": 220,
-        "wires": [
-            [
-                "ee86e89fa5ccab7b"
-            ]
-        ]
-    },
-    {
-        "id": "ee86e89fa5ccab7b",
-        "type": "function",
-        "z": "a38a9db5ce759685",
-        "name": "function 1",
-        "func": "(async () => {\n  const query = 'who was Joseph Weizenbaum?'\n\n  const response = await axios.get(\n    `https://www.bing.com/search?q=${encodeURIComponent(query)}&setlang=en`\n  )\n  const $ = cheerio.load(response.data)\n  const results = []\n  $('.b_algo').each((index, element) => {\n    const Title       = $(element).find('h2').text()\n    const URL         = $(element).find('h2 a').attr('href')\n    const Description = $(element).find('.b_caption p').text()\n    results.push({ Title, URL, Description })\n  })\nnode.warn(results)\n})()\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "JIL",
-                "module": "node-red-javascript-interface-library"
-            },
-            {
-                "var": "axios",
-                "module": "axios"
-            },
-            {
-                "var": "cheerio",
-                "module": "cheerio"
-            }
-        ],
-        "x": 580,
-        "y": 220,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "46c89ac9fcb8e2c0",
         "type": "function",
         "z": "a38a9db5ce759685",
