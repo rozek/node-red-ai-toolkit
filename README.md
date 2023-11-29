@@ -10,6 +10,8 @@ casual programmers
 > 
 > The node-red-ai-toolkit provides you with all the necessary components to build your own private personal AI assistant in the no-code/low-code environment Node-RED - fully open-source and completely free of charge!
 
+![Toolkit Screenshot](Toolkit-Screenshot.png)
+
 Build your own
 
 * Chatbot,
