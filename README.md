@@ -1,7 +1,9 @@
 # node-red-ai-toolkit
 
 > Do you also use Bing Chat all the time? And marvel at the possibilities of the OpenAI GPTs?
+> 
 > What if you could run a similar system completely on your own computer - changeable and expandable according to your own wishes? Without disclosing data to third parties and without having to fear horrendous bills? And if you also want to hardware sensors, control devices or integrate any other functions? And without (or at least only a little) having to program?
+> 
 > The node-red-ai-toolkit provides you with all the necessary components to build your own private personal AI assistant in the no-code/low-code environment Node-RED - fully open-source and completely free of charge!
 
 a collection of Node-RED nodes and flows for interactive low-code development of
