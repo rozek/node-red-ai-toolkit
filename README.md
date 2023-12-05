@@ -4,6 +4,65 @@ a collection of Node-RED nodes and flows for interactive low-code development of
 applications using AI technologies - free of charge and even for beginners or 
 casual programmers
 
+> **Nota bene**: this toolkit is currently under active development. After the first "quick preview" for the Backdrop Builders Contest, development is now back on the usual, more careful path. Please be patient until around mid-December before a practically usable version is released
+
+## Installation ##
+
+t.b.w.
+
+## Nodes and Interfaces ##
+
+The toolkit currently contains the following nodes:
+
+* **configure_toolkit** - configures the toolit and its nodes<br>&nbsp;<br>
+* **format_prompt**<br>&nbsp;<br>
+* **complete_text**
+* **complete_chat**
+* **tokenize_text**
+* **calculate_embeddings**<br>&nbsp;<br>
+* **detect_language**
+* **translate_language**<br>&nbsp;<br>
+* **split_text**
+* **assemble_text**<br>&nbsp;<br>
+* **summarize_text**<br>&nbsp;<br>
+* **[try_to_]extract_search_string_from_text**
+* **[try_to_]extract_decision_from_text**
+* **[try_to_]extract_[json]_list_from_text**
+* **[try_to_]extract_response_from_text**<br>&nbsp;<br>
+* **generate_function**
+* **evaluate_function**<br>&nbsp;<br>
+* **list_in_key/vector_store**
+* **read_from_key/vector_store**
+* **write_to_key/vector_store**
+* **find_in_key/vector_store**
+* **locate_in_vector_store**
+* **remove_from_key/vector_store**<br>&nbsp;<br>
+* **send_ui_reset**
+* **send_ui_state**
+* **send_ui_data**
+* **send_ui_model_list**
+* **send_ui_download_progress**
+* **send_ui_notice**
+* **send_ui_message_list**
+* **send_ui_progress**
+* **send_ui_response**<br>&nbsp;<br>
+* **process_ui_model**
+* **process_ui_download_interruption/continuation/cancellation**
+* **process_ui_feedback**
+* **process_ui_request**
+
+
+
+
+
+
+
+
+----
+
+(old contents start here)
+
+
 > Do you also use Bing Chat all the time? And marvel at the possibilities of the OpenAI GPTs?
 > 
 > What if you could run a similar system completely on your own computer - changeable and expandable according to your own wishes? Without disclosing data to third parties and without having to fear horrendous bills? And if you also want to hardware sensors, control devices or integrate any other functions? And without (or at least only a little) having to program?
