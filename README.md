@@ -50,6 +50,7 @@ The toolkit currently consists of the following nodes:
 * **process_ui_download_interruption/continuation/cancellation**
 * **process_ui_feedback**
 * **process_ui_request**
+* **process_ui_cancellation**
 
 
 
