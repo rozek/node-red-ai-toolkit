@@ -4,7 +4,7 @@ a collection of Node-RED nodes and flows for interactive low-code development of
 applications using AI technologies - free of charge and even for beginners or 
 casual programmers
 
-> **Nota bene**: this toolkit is currently under active development. After the first "quick preview" for the Backdrop Builders Contest, development is now back on the usual, more careful path. Please be patient until around mid-December before a practically usable version is released
+> **Nota bene**: this toolkit is currently under active development. After the first hectic "quick preview" for the Backdrop Builders Contest, development is now back on the usual, more careful path. Please be patient until around mid-December before a practically usable version is released
 
 ## Installation ##
 
