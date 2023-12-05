@@ -12,7 +12,7 @@ t.b.w.
 
 ## Nodes and Interfaces ##
 
-The toolkit currently contains the following nodes:
+The toolkit currently consists of the following nodes:
 
 * **configure_toolkit** - configures the toolit and its nodes<br>&nbsp;<br>
 * **format_prompt**<br>&nbsp;<br>
