@@ -265,53 +265,58 @@ takes a given JavaScript function and (asynchronously) evaluates it within a san
 
 ### Nodes for the Key-Value Store ###
 
-The following nodes may be used to access the built-in Key-Value Store
+The following nodes may be used to access the built-in Key-Value Store. That store is organized into separate independent "collections" with "entries" addressed by literal "keys". Any entry has the following structure:
+
+* **`Collection`** - the name of the collection this entry is part of
+* **`Key`** - the literal key this entry is stored under
+* **`Value`** - the primary content of this entry
+* **`Info`** - an optional JavaScript object with additional (usually application-specific) meta data for this entry
 
 #### load_key_store ####
 
-loads a given store collection as a whole from the file system.
+loads a given key-value store collection as a whole from the file system.
 
 (t.b.w.)
 
 #### patch_key_store ####
 
-writes a single store collection entry onto the file system.
+writes a single key-value store collection entry onto the file system.
 
 (t.b.w.)
 
 #### save_key_store ####
 
-writes a given store collection as a whole onto the file system.
+writes a given key-value store collection as a whole onto the file system.
 
 (t.b.w.)
 
 #### list_in_key_store ####
 
-lists either all store collections or all entries of a given store collection.
+lists either all key-value store collections or all entries of a given key-value store collection.
 
 (t.b.w.)
 
 #### get_from_key_store ####
 
-reads a single entry from a given store collection.
+reads a single entry from a given key-value store collection.
 
 (t.b.w.)
 
 #### put_to_key_store ####
 
-writes a single entry into a given store collection (overwriting any previous contents).
+writes a single entry into a given key-value store collection (overwriting any previous contents).
 
 (t.b.w.)
 
 #### find_in_key_store ####
 
-performs a simple full-text search over all entries of a given store collection and returns the keys of the first 1...n (or all) matching entries.
+performs a simple full-text search over all entries of a given key-value store collection and returns the keys of the first 1...n (or all) matching entries.
 
 (t.b.w.)
 
 #### remove_from_key_store ####
 
-removes a single entry from a given store collection.
+removes a single entry from a given key-value store collection.
 
 (t.b.w.)
 
