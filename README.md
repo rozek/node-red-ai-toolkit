@@ -14,68 +14,68 @@ t.b.w.
 
 The toolkit currently consists of the following nodes:
 
-* **configure_toolkit** - configures the toolkit and its nodes
-* **list_configuration** - reveals the current toolkit configuration<br>&nbsp;<br>
-* **check_for_toolkit_updates** - checks for updates of this toolkit
-* **check_for_model_updates** - checks for updates for the set of known AI models<br>&nbsp;<br>
-* **update_known_models** - updates the set of known AI models
-* **list_known_models** - lists all known models and their details
-* **list_available_models** - lists all already downloaded models
-* **list_pending_models** - lists all models currently being downloaded
-* **learn_model** - adds a given model to the set of known ones (or overwrites an existing one)
-* **unlearn_model** - removes a given model from the set of known ones<br>&nbsp;<br>
-* **download_file** - downloads a given file (and sends progress reports)
-* **cancel_download** - cancels an ongoing download<br>&nbsp;<br>
-* **format_prompt** - formats a prompt for a given model from a given list of messages<br>&nbsp;<br>
-* **complete_text** - performs a text completion
-* **complete_chat** - performs a message list completion
-* **tokenize_text** - tokenizes a given text
-* **calculate_embedding** - calculates the embedding vector for a given text<br>&nbsp;<br>
-* **split_text** - splits a long text into chunks suitable for a given model
-* **assemble_text** - reassembles a split text (e.g., after chunk-wise processing)<br>&nbsp;<br>
-* **summarize_text** - summarizes a given text<br>&nbsp;<br>
-* **[try_to_]extract_search_string_from_text** - constructs a search engine prompt from a given text
-* **[try_to_]extract_decision_from_text** - runs a "text completion" with the possible results `yes` or `no` (or `unknown`)
-* **[try_to_]extract_list_from_text** - runs a "text completion" and returns a newline-separated list of strings
-* **[try_to_]extract_json_list_from_text** - runs a "text completion" and returns a list of JavaScript strings in JSON format
-* **[try_to_]extract_response_from_text** - runs a "text completion" with a request that is applied to a given text<br>&nbsp;<br>
-* **detect_language** - tries to detect the language of a given text
-* **translate_language** - translates a given text from one language into another<br>&nbsp;<br>
-* **generate_function** - generates a (JavaScript) function
-* **evaluate_function** - runs a given (JavaScript) function in a sandbox<br>&nbsp;<br>
-* **load_key_store** - reads a complete key-value store collection from the file system
-* **patch_key_store** - writes a given key-value store collection entry to the file system
-* **save_key_store** - writes a complete key-value store collection to the file system
-* **list_in_key_store** - lists all collections (or the keys of a given collection) in the key-value store
-* **get_from_key_store** - reads a given collection entry from the key-value store
-* **put_to_key_store** - writes a given collection entry to the key-value store
-* **find_in_key_store** - performs a full-text search over a given collection in the key-value store
-* **remove_from_key_store** - removes a given collection entry (or a whole collection) from the key-value store<br>&nbsp;<br>
-* **load_vector_store** - reads a complete vector store collection from the file system
-* **patch_vector_store** - writes a given vector store collection entry to the file system
-* **save_vector_store** - writes a complete vector store collection to the file system
-* **list_in_vector_store** - lists all collections (or the keys of a given collection) in the vector store
-* **get_from_vector_store** - reads a given collection entry from the vector store
-* **put_to_vector_store** - writes a given collection entry to the vector store
-* **find_in_vector_store** - performs a full-text search over a given collection in the vector store
-* **locate_in_vector_store** - uses "cosine similarity" to locate one or multiple entries close to a given embedding vector in the vector store
-* **remove_from_vector_store** - removes a given collection entry (or a whole collection) from the vector store<br>&nbsp;<br>
-* **send_ui_reset** - sends a "reset" request (opt. providing explicit default settings) to the UI
-* **send_ui_state** - sends an application-specific state to the UI
-* **send_ui_data** - sends application-specific data to the UI
-* **send_ui_known_model_list** - sends a list of all currently known models to the UI
-* **send_ui_available_model_list** - sends a list of all currently available models to the UI
-* **send_ui_download_progress** - sends a progress report for a given file download
-* **send_ui_notice** - sends a "notice" to the UI (which may be shown as a "toast" or within a notice bar)
-* **send_ui_message_list** - sends a complete list of messages to the UI
-* **send_ui_progress** - sends a (text or chat) completion progress report to the UI
-* **send_ui_data_request** - sends a request for additional input data to the UI<br>&nbsp;<br>
-* **send_ui_response** - sends the final output of a (text or chat) completion to the UI
-* **process_ui_model_choice** - processes an incoming model choice from the UI
-* **process_ui_download_continuation** - processes an incoming file download continuation request from the UI
-* **process_ui_download_cancellation** - processes an incoming file download cancellation request from the UI
-* **process_ui_data_response** - processes an incoming reponse to a previously sent enquiry for additional information
-* **process_ui_request** - processes an incoming (text or chat) completion  request from the UI
+* **[configure_toolkit](https://github.com/rozek/node-red-ai-toolkit#configure_toolkit)** - configures the toolkit and its nodes
+* **[list_configuration](https://github.com/rozek/node-red-ai-toolkit#list_configuration)** - reveals the current toolkit configuration<br>&nbsp;<br>
+* **[check_for_toolkit_updates](https://github.com/rozek/node-red-ai-toolkit#check_for_toolkit_updates)** - checks for updates of this toolkit
+* **[check_for_model_updates](https://github.com/rozek/node-red-ai-toolkit#check_for_model_updates)** - checks for updates for the set of known AI models<br>&nbsp;<br>
+* **[update_known_models](https://github.com/rozek/node-red-ai-toolkit#update_known_models)** - updates the set of known AI models
+* **[list_known_models](https://github.com/rozek/node-red-ai-toolkit#list_known_models)** - lists all known models and their details
+* **[list_available_models](https://github.com/rozek/node-red-ai-toolkit#list_available_models)** - lists all already downloaded models
+* **[list_pending_models](https://github.com/rozek/node-red-ai-toolkit#list_pending_models)** - lists all models currently being downloaded
+* **[learn_model](https://github.com/rozek/node-red-ai-toolkit#learn_model)** - adds a given model to the set of known ones (or overwrites an existing one)
+* **[unlearn_model](https://github.com/rozek/node-red-ai-toolkit#unlearn_model)** - removes a given model from the set of known ones<br>&nbsp;<br>
+* **[download_file](https://github.com/rozek/node-red-ai-toolkit#download_file)** - downloads a given file (and sends progress reports)
+* **[cancel_download](https://github.com/rozek/node-red-ai-toolkit#cancel_download)** - cancels an ongoing download<br>&nbsp;<br>
+* **[format_prompt](https://github.com/rozek/node-red-ai-toolkit#format_prompt)** - formats a prompt for a given model from a given list of messages<br>&nbsp;<br>
+* **[complete_text](https://github.com/rozek/node-red-ai-toolkit#complete_text)** - performs a text completion
+* **[complete_chat](https://github.com/rozek/node-red-ai-toolkit#complete_chat)** - performs a message list completion
+* **[tokenize_text](https://github.com/rozek/node-red-ai-toolkit#tokenize_text)** - tokenizes a given text
+* **[calculate_embedding](https://github.com/rozek/node-red-ai-toolkit#calculate_embedding)** - calculates the embedding vector for a given text<br>&nbsp;<br>
+* **[split_text](https://github.com/rozek/node-red-ai-toolkit#split_text)** - splits a long text into chunks suitable for a given model
+* **[assemble_text](https://github.com/rozek/node-red-ai-toolkit#assemble_text)** - reassembles a split text (e.g., after chunk-wise processing)<br>&nbsp;<br>
+* **[summarize_text](https://github.com/rozek/node-red-ai-toolkit#summarize_text)** - summarizes a given text<br>&nbsp;<br>
+* **[\[try_to_\]extract_search_string_from_text](https://github.com/rozek/node-red-ai-toolkit#try_to_extract_search_string_from_text)** - constructs a search engine prompt from a given text
+* **[\[try_to_\]extract_decision_from_text](https://github.com/rozek/node-red-ai-toolkit#try_to_extract_decision_from_text)** - runs a "text completion" with the possible results `yes` or `no` (or `unknown`)
+* **[\[try_to_\]extract_list_from_text](https://github.com/rozek/node-red-ai-toolkit#try_to_extract_list_from_text)** - runs a "text completion" and returns a newline-separated list of strings
+* **[\[try_to_\]extract_json_list_from_text](https://github.com/rozek/node-red-ai-toolkit#try_to_extract_json_list_from_text)** - runs a "text completion" and returns a list of JavaScript strings in JSON format
+* **[\[try_to_\]extract_response_from_text](https://github.com/rozek/node-red-ai-toolkit#try_to_extract_response_from_text)** - runs a "text completion" with a request that is applied to a given text<br>&nbsp;<br>
+* **[detect_language](https://github.com/rozek/node-red-ai-toolkit#detect_language)** - tries to detect the language of a given text
+* **[translate_language](https://github.com/rozek/node-red-ai-toolkit#translate_language)** - translates a given text from one language into another<br>&nbsp;<br>
+* **[generate_function](https://github.com/rozek/node-red-ai-toolkit#generate_function)** - generates a (JavaScript) function
+* **[evaluate_function](https://github.com/rozek/node-red-ai-toolkit#evaluate_function)** - runs a given (JavaScript) function in a sandbox<br>&nbsp;<br>
+* **[load_key_store](https://github.com/rozek/node-red-ai-toolkit#load_key_store)** - reads a complete key-value store collection from the file system
+* **[patch_key_store](https://github.com/rozek/node-red-ai-toolkit#patch_key_store)** - writes a given key-value store collection entry to the file system
+* **[save_key_store](https://github.com/rozek/node-red-ai-toolkit#save_key_store)** - writes a complete key-value store collection to the file system
+* **[list_in_key_store](https://github.com/rozek/node-red-ai-toolkit#list_in_key_store)** - lists all collections (or the keys of a given collection) in the key-value store
+* **[get_from_key_store](https://github.com/rozek/node-red-ai-toolkit#get_from_key_store)** - reads a given collection entry from the key-value store
+* **[put_to_key_store](https://github.com/rozek/node-red-ai-toolkit#put_to_key_store)** - writes a given collection entry to the key-value store
+* **[find_in_key_store](https://github.com/rozek/node-red-ai-toolkit#find_in_key_store)** - performs a full-text search over a given collection in the key-value store
+* **[remove_from_key_store](https://github.com/rozek/node-red-ai-toolkit#remove_from_key_store)** - removes a given collection entry (or a whole collection) from the key-value store<br>&nbsp;<br>
+* **[load_vector_store](https://github.com/rozek/node-red-ai-toolkit#load_vector_store)** - reads a complete vector store collection from the file system
+* **[patch_vector_store](https://github.com/rozek/node-red-ai-toolkit#patch_vector_store)** - writes a given vector store collection entry to the file system
+* **[save_vector_store](https://github.com/rozek/node-red-ai-toolkit#save_vector_store)** - writes a complete vector store collection to the file system
+* **[list_in_vector_store](https://github.com/rozek/node-red-ai-toolkit#list_in_vector_store)** - lists all collections (or the keys of a given collection) in the vector store
+* **[get_from_vector_store](https://github.com/rozek/node-red-ai-toolkit#get_from_vector_store)** - reads a given collection entry from the vector store
+* **[put_to_vector_store](https://github.com/rozek/node-red-ai-toolkit#put_to_vector_store)** - writes a given collection entry to the vector store
+* **[find_in_vector_store](https://github.com/rozek/node-red-ai-toolkit#find_in_vector_store)** - performs a full-text search over a given collection in the vector store
+* **[locate_in_vector_store](https://github.com/rozek/node-red-ai-toolkit#locate_in_vector_store)** - uses "cosine similarity" to locate one or multiple entries close to a given embedding vector in the vector store
+* **[remove_from_vector_store](https://github.com/rozek/node-red-ai-toolkit#remove_from_vector_store)** - removes a given collection entry (or a whole collection) from the vector store<br>&nbsp;<br>
+* **[send_ui_reset](https://github.com/rozek/node-red-ai-toolkit#send_ui_reset)** - sends a "reset" request (opt. providing explicit default settings) to the UI
+* **[send_ui_state](https://github.com/rozek/node-red-ai-toolkit#send_ui_state)** - sends an application-specific state to the UI
+* **[send_ui_data](https://github.com/rozek/node-red-ai-toolkit#send_ui_data)** - sends application-specific data to the UI
+* **[send_ui_known_model_list](https://github.com/rozek/node-red-ai-toolkit#send_ui_known_model_list)** - sends a list of all currently known models to the UI
+* **[send_ui_available_model_list](https://github.com/rozek/node-red-ai-toolkit#send_ui_available_model_list)** - sends a list of all currently available models to the UI
+* **[send_ui_download_progress](https://github.com/rozek/node-red-ai-toolkit#send_ui_download_progress)** - sends a progress report for a given file download
+* **[send_ui_notice](https://github.com/rozek/node-red-ai-toolkit#send_ui_notice)** - sends a "notice" to the UI (which may be shown as a "toast" or within a notice bar)
+* **[send_ui_message_list](https://github.com/rozek/node-red-ai-toolkit#send_ui_message_list)** - sends a complete list of messages to the UI
+* **[send_ui_progress](https://github.com/rozek/node-red-ai-toolkit#send_ui_progress)** - sends a (text or chat) completion progress report to the UI
+* **[send_ui_data_request](https://github.com/rozek/node-red-ai-toolkit#send_ui_data_request)** - sends a request for additional input data to the UI<br>&nbsp;<br>
+* **[send_ui_response](https://github.com/rozek/node-red-ai-toolkit#send_ui_response)** - sends the final output of a (text or chat) completion to the UI
+* **[process_ui_model_choice](https://github.com/rozek/node-red-ai-toolkit#process_ui_model_choice)** - processes an incoming model choice from the UI
+* **[process_ui_download_continuation](https://github.com/rozek/node-red-ai-toolkit#process_ui_download_continuation)** - processes an incoming file download continuation request from the UI
+* **[process_ui_download_cancellation](https://github.com/rozek/node-red-ai-toolkit#process_ui_download_cancellation)** - processes an incoming file download cancellation request from the UI
+* **[process_ui_data_response](https://github.com/rozek/node-red-ai-toolkit#process_ui_data_response)** - processes an incoming reponse to a previously sent enquiry for additional information
+* **[process_ui_request](https://github.com/rozek/node-red-ai-toolkit#process_ui_request)** - processes an incoming (text or chat) completion  request from the UI
 * **[process_ui_cancellation](https://github.com/rozek/node-red-ai-toolkit#process_ui_cancellation)** - processes an incoming completion cancellation request from the UI
 
 ### Configuration- and Resource-related Nodes ###
