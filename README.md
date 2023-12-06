@@ -537,11 +537,11 @@ The `Quantizations` characteristic is a JavaScript object whose properties are n
 
 The `Templates` characteristic is a JavaScript object with the following properties:
 
-* **`Prefix`**
-* **`System`**
-* **`User`**
-* **`Assistant`**
-* **`Suffix`**
+* **`Prefix`** - contains the recommended prompt prefix for models which do not support "system" messages
+* **`System`** - contains the template for a "system" message with `${Content}` as the placeholder for the actual content of that message
+* **`User`** - contains the template for a "user" message with `${Content}` as the placeholder for the actual content of that message
+* **`Assistant`** - contains the template for a (complete) "assistant" message with `${Content}` as the placeholder for the actual content of that message
+* **`Suffix`** - contains the recommended prompt suffix to trigger a proper text completion (normally, this is just an incomplete "assistant" message)
 
 
 
