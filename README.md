@@ -14,29 +14,45 @@ t.b.w.
 
 The toolkit currently consists of the following nodes:
 
-* **configure_toolkit** - configures the toolit and its nodes<br>&nbsp;<br>
-* **format_prompt**<br>&nbsp;<br>
-* **complete_text**
-* **complete_chat**
-* **tokenize_text**
-* **calculate_embeddings**<br>&nbsp;<br>
-* **detect_language**
-* **translate_language**<br>&nbsp;<br>
-* **split_text**
-* **assemble_text**<br>&nbsp;<br>
-* **summarize_text**<br>&nbsp;<br>
-* **[try_to_]extract_search_string_from_text**
-* **[try_to_]extract_decision_from_text**
-* **[try_to_]extract_[json]_list_from_text**
-* **[try_to_]extract_response_from_text**<br>&nbsp;<br>
-* **generate_function**
-* **evaluate_function**<br>&nbsp;<br>
-* **list_in_key/vector_store**
-* **read_from_key/vector_store**
-* **write_to_key/vector_store**
-* **find_in_key/vector_store**
+* **configure_toolkit** - configures the toolit and its nodes
+* **list_configuration** - reveals the current toolkit configuration<br>&nbsp;<br>
+* **check_for_toolkit_updates** - checks for updates of this toolkit
+* **check_for_model_updates** - checks for updates for the set of known AI models<br>&nbsp;<br>
+* **update_known_models** - updates the set of known AI models
+* **list_known_models** - lists all known models and their details
+* **list_available_models** - lists all already downloaded models
+* **list_pending_models** - lists all models currently being downloaded
+* **learn_model** - adds a given model to the set of known ones (or overwrites an existing one)
+* **unlearn_model** - removes a given model from the set of known ones<br>&nbsp;<br>
+* **download_file** - downloads a given file (and sends progress reports)
+* **cancel_download** - cancels an ongoing download<br>&nbsp;<br>
+* **format_prompt** - formats a prompt for a given model from a given list of messages<br>&nbsp;<br>
+* **complete_text** - performs a text completion
+* **complete_chat** - performs a message list completion
+* **tokenize_text** - tokenizes a given text
+* **calculate_embedding** - calculates the embedding vector for a given text<br>&nbsp;<br>
+* **detect_language** - tries to detect the language of a given text
+* **translate_language** - translates a given text from one language into another<br>&nbsp;<br>
+* **split_text** - splits a long text into chunks suitable for a given model
+* **assemble_text** - reassembles a split text (e.g., after chunk-wise processing)<br>&nbsp;<br>
+* **summarize_text** - summarizes a given text<br>&nbsp;<br>
+* **[try_to_]extract_search_string_from_text** - constructs a search engine prompt from a given text
+* **[try_to_]extract_decision_from_text** - runs a "text completion" with the possible results `yes` or `no` (or `unknown`)
+* **[try_to_]extract_[json]_list_from_text** - runs a "text completion" and returns either a newline-separated list of strings or a list of JavaScript strings in JSON format
+* **[try_to_]extract_response_from_text** - runs a "text completion" with a request that is applied to a given text<br>&nbsp;<br>
+* **generate_function** - generates a (JavaScript) function
+* **evaluate_function** - runs a given (JavaScript) function in a sandbox<br>&nbsp;<br>
+* **list_in_key_store**
+* **read_from_key_store**
+* **write_to_key_store**
+* **find_in_key_store**
+* **remove_from_key_store**<br>&nbsp;<br>
+* **list_in_vector_store**
+* **read_from_vector_store**
+* **write_to_vector_store**
+* **find_in_vector_store**
 * **locate_in_vector_store**
-* **remove_from_key/vector_store**<br>&nbsp;<br>
+* **remove_from_vector_store**<br>&nbsp;<br>
 * **send_ui_reset**
 * **send_ui_state**
 * **send_ui_data**
