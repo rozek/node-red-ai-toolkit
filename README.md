@@ -77,7 +77,7 @@ The toolkit currently consists of the following nodes:
 * **process_ui_request** - processes an incoming (text or chat) completion  request from the UI
 * **process_ui_cancellation** - processes an incoming completion cancellation request from the UI
 
-### configure_toolkit ###
+#### configure_toolkit ####
 
 (t.b.w.)
 
