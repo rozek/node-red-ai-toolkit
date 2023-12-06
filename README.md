@@ -14,7 +14,7 @@ t.b.w.
 
 The toolkit currently consists of the following nodes:
 
-* **configure_toolkit** - configures the toolit and its nodes
+* **configure_toolkit** - configures the toolkit and its nodes
 * **list_configuration** - reveals the current toolkit configuration<br>&nbsp;<br>
 * **check_for_toolkit_updates** - checks for updates of this toolkit
 * **check_for_model_updates** - checks for updates for the set of known AI models<br>&nbsp;<br>
