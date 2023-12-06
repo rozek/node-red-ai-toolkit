@@ -92,9 +92,9 @@ The toolkit currently consists of the following nodes:
 * **[process_ui_request](https://github.com/rozek/node-red-ai-toolkit#process_ui_request)** - processes an incoming (text or chat) completion  request from the UI
 * **[process_ui_cancellation](https://github.com/rozek/node-red-ai-toolkit#process_ui_cancellation)** - processes an incoming completion cancellation request from the UI
 
-### Configuration- and Resource-related Nodes ###
+## Configuration- and Resource-related Nodes ##
 
-#### configure_toolkit ####
+### configure_toolkit ###
 
 This node can be used to configure the Node-RED AI Toolkit according to your specific needs. Uusually, it is invoked upon node deployment (or at server startup) and then never used again
 
