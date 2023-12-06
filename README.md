@@ -213,19 +213,25 @@ tries to construct one or several search engine prompts from a given text
 
 #### [try_to_]extract_decision_from_text ####
 
-tries to apply a given prompt to a given text returning either `yes` or `no` only (if `extract_decision_from_text` is used) or one of `yes`, `no` or `unknown` (if `try_to_extract_decision_from_text` is used). Please note, that the given prompt must tell the used AI model to only respond with one of the permitted keywords - this node then asserts the proper output
+tries to apply a given prompt to a given text returning either `yes` or `no` only (if `extract_decision_from_text` is used) or one of `yes`, `no` or `unknown` (if `try_to_extract_decision_from_text` is used). Please note, that the given prompt must tell the used AI model to only respond with one of the permitted keywords - this node then asserts the proper output.
 
 (t.b.w.)
 
 #### [try_to_]extract_list_from_text ####
 
+tries to apply a given prompt to a given text returning a newline-separated list of strings (with no inner newlines, of course). Please note, that the given prompt must tell the used AI model to only respond with such a list - this node then asserts the proper output.
+
 (t.b.w.)
 
 #### [try_to_]extract_json_list_from_text ####
 
+tries to apply a given prompt to a given text returning a JSON-formatted list of JavaScript strings. Please note, that the given prompt must tell the used AI model to only respond with such a list - this node then asserts the proper output.
+
 (t.b.w.)
 
 #### [try_to_]extract_response_from_text ####
+
+tries to apply a given prompt to a given text with the objective to extract the desired information from that text.
 
 (t.b.w.)
 
@@ -235,17 +241,25 @@ The following nodes provide additional, often required functions
 
 #### detect_language ####
 
+Takes a given text and tries to detect the language it is written in.
+
 (t.b.w.)
 
 #### translate_language ####
+
+Takes a given text and translates it from one language into another one.
 
 (t.b.w.)
 
 #### generate_function ####
 
+takes a given text and generates the body of an asynchronous JavaScript function based on what the text requests (using a code-generating AI model). Please note, that the given prompt must tell the used AI model to generate such a function body - this node then asserts the proper output.
+
 (t.b.w.)
 
 #### evaluate_function ####
+
+takes a given JavaScript function and (asynchronously) evaluates it within a sandbox. The given function must not require any arguments but may return any value which is then used as the output of this node. Any thrown exceptions are caught and passed using a different output pin. If desired, a timeout value may be given that aborts the function after a while.
 
 (t.b.w.)
 
@@ -255,33 +269,49 @@ The following nodes may be used to access the built-in Key-Value Store
 
 #### load_key_store ####
 
+loads a given store collection as a whole from the file system.
+
 (t.b.w.)
 
 #### patch_key_store ####
+
+writes a single store collection entry onto the file system.
 
 (t.b.w.)
 
 #### save_key_store ####
 
+writes a given store collection as a whole onto the file system.
+
 (t.b.w.)
 
 #### list_in_key_store ####
+
+lists either all store collections or all entries of a given store collection.
 
 (t.b.w.)
 
 #### get_from_key_store ####
 
+reads a single entry from a given store collection.
+
 (t.b.w.)
 
 #### put_to_key_store ####
+
+writes a single entry into a given store collection (overwriting any previous contents).
 
 (t.b.w.)
 
 #### find_in_key_store ####
 
+performs a simple full-text search over all entries of a given store collection and returns the keys of the first 1...n (or all) matching entries.
+
 (t.b.w.)
 
 #### remove_from_key_store ####
+
+removes a single entry from a given store collection.
 
 (t.b.w.)
 
