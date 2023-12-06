@@ -106,184 +106,184 @@ This node can be used to configure the Node-RED AI Toolkit according to your spe
 
 * **`msg.ToolkitVersion`** - contains the most recently released version of this Toolkit
 
-#### list_configuration ####
+### list_configuration ###
 
 returns a set of all configuration settings
 
 (t.b.w.)
 
-#### check_for_toolkit_updates ####
+### check_for_toolkit_updates ###
 
 starts a REST request against this repository to check whether there is a new version of this toolkit. Right now, there is no possibility to automatically update the nodes in a flow from within Node-RED - thus, your application should just display a notice and let the user replace the existing toolkit flow with a new one when necessary.
 
 (t.b.w.)
 
-#### check_for_model_updates ####
+### check_for_model_updates ###
 
 starts a REST request against this repository to check whether there is a new version of the "official" 
 list of "known" AI models. If so, you may use the node `update_known_models` to download the new list and store it locally in your configured `ModelFolder`.
 
 (t.b.w.)
 
-#### update_known_models ####
+### update_known_models ###
 
 starts a REST request against this repository to download the current list of "officially known" AI models and store it locally in your configured `ModelFolder`.
 
 (t.b.w.)
 
-#### list_known_models ####
+### list_known_models ###
 
 constructs a list of all currently "known" AI models (including official ones from this repository and locally taught models) and their characteristics (such as the program required for text completion, the recommended prompt structure and the maximal context length).
 
 (t.b.w.)
 
-#### list_available_models ####
+### list_available_models ###
 
 constructs a list of all currently installed AI models (together with their characteristics as stored in the model set).
 
 (t.b.w.)
 
-#### list_pending_models ####
+### list_pending_models ###
 
 constructs a list of all AI models which are currently being downloaded (together with their download progress).
 
 (t.b.w.)
 
-#### learn_model ####
+### learn_model ###
 
 adds a given model to the local set of "known" AI models. You may either add a new model or change the characteristics of an already existing one.
 
 (t.b.w.)
 
-#### unlearn_model ####
+### unlearn_model ###
 
 removes a given model to the local set of "known" AI models. You may remove locally "taught" models as well as "officially known" ones. It is safe to remove a non-existent model.
 
 (t.b.w.)
 
-#### download_file ####
+### download_file ###
 
 starts downloading a file from a given URL into a gien target folder. It is forbidden to download a file which is already being downloaded - unless the download was interrupted for any reason (such as a server or network failure) in which case the toolkit tries to resume the download (or, if that is not supported by the server, to restart it)
 
 (t.b.w.)
 
-#### cancel_download ####
+### cancel_download ###
 
 cancels an ongoing file download and removes what has been downloaded before. Cancelling an already completed download is forbidden
 
 (t.b.w.)
 
-### AI-related Nodes ###
+## AI-related Nodes ##
 
 The following nodes are directly related to AI models and their usage
 
-#### format_prompt ####
+### format_prompt ###
 
 takes a list of (properly constructed) messages and creates a "prompt" for a given AI model. This prompt may then by sent to a `complete_text` node.
 
 (t.b.w.)
 
-#### complete_text ####
+### complete_text ###
 
 takes a given text prompt and runs a text completion using a given model with given settings.
 
 (t.b.w.)
 
-#### complete_chat ####
+### complete_chat ###
 
 takes a list of (properly constructed) messages, converts them into a prompt and runs a text completion using a given model with given settings. Basically, this node is just a concatenation of `format_prompt` and `complete_text`.
 
 (t.b.w.)
 
-#### tokenize_text ####
+### tokenize_text ###
 
 tokenizes a given text using a given model, producing a list of tokens given by their internal code and the corresponding (sequence of) characters.
 
 (t.b.w.)
 
-#### calculate_embedding ####
+### calculate_embedding ###
 
 calculates the embedding vector for a given text using a given model. This vector may then be used, e.g., as an index of some content in a vector database which may then be found by a "similarity search".
 
 (t.b.w.)
 
-#### split_text ####
+### split_text ###
 
 takes a given text and tries to split it into "chunks" (short enough to be processed by a given AI model) in an "intelligent" way, i.e., without splitting paragraphs, sentences or words. This split requires the given text to be "tokenized" unless the list of tokens for the given text exists already.
 
 (t.b.w.)
 
-#### assemble_text ####
+### assemble_text ###
 
 takes a given list of chunks and joins them into a single text. If all chunks were provided with their associated token lists, the resulting text will have an associated token list as well.
 
 (t.b.w.)
 
-#### summarize_text ####
+### summarize_text ###
 
 tries to summarize a given text. if this text is too long to be summarized in a single run, it will be split into chunks, summarized chunk by chunk and these summaries then by re-assembled into the final result. Depending on the size of the original text (compared to the context length of AI model used), several such rounds may be necessary before a response can be issued
 
 (t.b.w.)
 
-#### [try_to_]extract_search_string_from_text ####
+### [try_to_]extract_search_string_from_text ###
 
 tries to construct one or several search engine prompts from a given text
 
 (t.b.w.)
 
-#### [try_to_]extract_decision_from_text ####
+### [try_to_]extract_decision_from_text ###
 
 tries to apply a given prompt to a given text returning either `yes` or `no` only (if `extract_decision_from_text` is used) or one of `yes`, `no` or `unknown` (if `try_to_extract_decision_from_text` is used). Please note, that the given prompt must tell the used AI model to only respond with one of the permitted keywords - this node then asserts the proper output.
 
 (t.b.w.)
 
-#### [try_to_]extract_list_from_text ####
+### [try_to_]extract_list_from_text ###
 
 tries to apply a given prompt to a given text returning a newline-separated list of strings (with no inner newlines, of course). Please note, that the given prompt must tell the used AI model to only respond with such a list - this node then asserts the proper output.
 
 (t.b.w.)
 
-#### [try_to_]extract_json_list_from_text ####
+### [try_to_]extract_json_list_from_text ###
 
 tries to apply a given prompt to a given text returning a JSON-formatted list of JavaScript strings. Please note, that the given prompt must tell the used AI model to only respond with such a list - this node then asserts the proper output.
 
 (t.b.w.)
 
-#### [try_to_]extract_response_from_text ####
+### [try_to_]extract_response_from_text ###
 
 tries to apply a given prompt to a given text with the objective to extract the desired information from that text.
 
 (t.b.w.)
 
-### Nodes for Additional Functionalities ###
+## Nodes for Additional Functionalities ##
 
 The following nodes provide additional, often required functions
 
-#### detect_language ####
+### detect_language ###
 
 Takes a given text and tries to detect the language it is written in.
 
 (t.b.w.)
 
-#### translate_language ####
+### translate_language ###
 
 Takes a given text and translates it from one language into another one.
 
 (t.b.w.)
 
-#### generate_function ####
+### generate_function ###
 
 takes a given text and generates the body of an asynchronous JavaScript function based on what the text requests (using a code-generating AI model). Please note, that the given prompt must tell the used AI model to generate such a function body - this node then asserts the proper output.
 
 (t.b.w.)
 
-#### evaluate_function ####
+### evaluate_function ###
 
 takes a given JavaScript function and (asynchronously) evaluates it within a sandbox. The given function must not require any arguments but may return any value which is then used as the output of this node. Any thrown exceptions are caught and passed using a different output pin. If desired, a timeout value may be given that aborts the function after a while.
 
 (t.b.w.)
 
-### Nodes for the Key-Value Store ###
+## Nodes for the Key-Value Store ##
 
 The following nodes may be used to access the built-in Key-Value Store. That store is organized into separate independent "collections" with "entries" addressed by literal "keys". Any entry has the following structure:
 
@@ -292,55 +292,55 @@ The following nodes may be used to access the built-in Key-Value Store. That sto
 * **`Value`** - the primary content of this entry
 * **`Info`** - an optional JavaScript object with additional (usually application-specific) meta data for this entry
 
-#### load_key_store ####
+### load_key_store ###
 
 loads a given key-value store collection as a whole from the file system.
 
 (t.b.w.)
 
-#### patch_key_store ####
+### patch_key_store ###
 
 writes a single key-value store collection entry onto the file system.
 
 (t.b.w.)
 
-#### save_key_store ####
+### save_key_store ###
 
 writes a given key-value store collection as a whole onto the file system.
 
 (t.b.w.)
 
-#### list_in_key_store ####
+### list_in_key_store ###
 
 lists either the names of all key-value store collections or the keys of all entries of a given key-value store collection.
 
 (t.b.w.)
 
-#### get_from_key_store ####
+### get_from_key_store ###
 
 reads a single entry from a given key-value store collection.
 
 (t.b.w.)
 
-#### put_to_key_store ####
+### put_to_key_store ###
 
 writes a single entry into a given key-value store collection (overwriting any previous contents).
 
 (t.b.w.)
 
-#### find_in_key_store ####
+### find_in_key_store ###
 
 performs a simple full-text search over all entries of a given key-value store collection and returns the keys of the first 1...n (or all) matching entries.
 
 (t.b.w.)
 
-#### remove_from_key_store ####
+### remove_from_key_store ###
 
 removes either a single entry from a given key-value store collection or a whole key-value store collection.
 
 (t.b.w.)
 
-### nodes for the Vector Store ###
+## nodes for the Vector Store ##
 
 The following nodes can be used to access the built-in Vector Store. That store resembles very much the "Key-Value Store" mentioned before, but additionally supports a "similarity search" using embedding vectors calculated by an AI model (nota bene: for compatibility reasons, all vectors should be calculated using the same AI model)
 
@@ -352,161 +352,161 @@ The vector store is organized into separate independent "collections" with "entr
 * **`Value`** - the primary content of this entry
 * **`Info`** - an optional JavaScript object with additional (usually application-specific) meta data for this entry
 
-#### load_vector_store ####
+### load_vector_store ###
 
 loads a given vector store collection as a whole from the file system.
 
 (t.b.w.)
 
-#### patch_vector_store ####
+### patch_vector_store ###
 
 writes a single vector store collection entry onto the file system.
 
 (t.b.w.)
 
-#### save_vector_store ####
+### save_vector_store ###
 
 writes a given vector store collection as a whole onto the file system.
 
 (t.b.w.)
 
-#### list_in_vector_store ####
+### list_in_vector_store ###
 
 lists either the names of all vector store collections or the keys of all entries of a given vector store collection.
 
 (t.b.w.)
 
-#### get_from_vector_store ####
+### get_from_vector_store ###
 
 reads a single entry from a given vector store collection.
 
 (t.b.w.)
 
-#### put_to_vector_store ####
+### put_to_vector_store ###
 
 writes a single entry into a given vector store collection (overwriting any previous contents).
 
 (t.b.w.)
 
-#### find_in_vector_store ####
+### find_in_vector_store ###
 
 performs a simple full-text search over all entries of a given vector store collection and returns the keys of the first 1...n (or all) matching entries.
 
 (t.b.w.)
 
-#### locate_in_vector_store ####
+### locate_in_vector_store ###
 
 performs a "similarity search" based on the "cosine similarity" between (the embedding vector of) each entry of a given vector collection and (the embedding vector of) a given search text and returns (0),1...n matching entries sorted by descending similarity. If desired, a similarity threshold may be specified to consider really similar entries only
 
 (t.b.w.)
 
-#### remove_from_vector_store ####
+### remove_from_vector_store ###
 
 removes either a single entry from a given vector store collection or a whole vector store collection.
 
 (t.b.w.)
 
-### Nodes for the UI ###
+## Nodes for the UI ##
 
 This toolkit directly supports web-based user interfaces created with the [Node-RED UIBuilder](https://github.com/TotallyInformation/node-red-contrib-uibuilder). The following nodes can be used to interact with such a user interface
 
-#### send_ui_reset ####
+### send_ui_reset ###
 
 sends a "Reset" request to the attached UI, optionally along with explicit default settings. It is up to the UI to ignore this message or react properly.
 
 (t.b.w.)
 
-#### send_ui_state ####
+### send_ui_state ###
 
 sends an application-specific "state" object to the attached UI. It is up to the UI to ignore this message or react properly.
 
 (t.b.w.)
 
-#### send_ui_data ####
+### send_ui_data ###
 
 sends an application-specific "data" object to the attached UI. It is up to the UI to ignore this message or react properly.
 
 (t.b.w.)
 
-#### send_ui_known_model_list ####
+### send_ui_known_model_list ###
 
 sends a list of all _known_ AI models (and their characteristics) to the attached UI. It is up to the UI to ignore this message or react properly.
 
 (t.b.w.)
 
-#### send_ui_available_model_list ####
+### send_ui_available_model_list ###
 
 sends a list of all actually _available_ AI models (and their characteristics) to the attached UI. It is up to the UI to ignore this message or react properly.
 
 (t.b.w.)
 
-#### send_ui_download_progress ####
+### send_ui_download_progress ###
 
 sends a "download progress" message for a given URL to the attached UI. It is up to the UI to ignore this message or react properly.
 
 (t.b.w.)
 
-#### send_ui_notice ####
+### send_ui_notice ###
 
 sends a "notice" message of a given type (either `error`, `warning` or `info`) to the attached UI. It is up to the UI to ignore this message or react properly.
 
 (t.b.w.)
 
-#### send_ui_message_list ####
+### send_ui_message_list ###
 
 sends a complete (chat) message list to the attached UI. It is up to the UI to ignore this message or react properly.
 
 (t.b.w.)
 
-#### send_ui_progress ####
+### send_ui_progress ###
 
 sends an "action progress" message to the attached UI. It is up to the UI to ignore this message or react properly.
 
 (t.b.w.)
 
-#### send_ui_data_request ####
+### send_ui_data_request ###
 
 sends a "data request" message to the attached UI by which an action requests additional input from the user. The UI should handle this message (usually by displaying the request and waiting for the user to enter some text) and send the user input back (see below).
 
 (t.b.w.)
 
-#### send_ui_response ####
+### send_ui_response ###
 
 sends the ultimate response of an action to the attached UI. The UI should append this response in its internal (chat) message list or update a previous version of that response.
 
 (t.b.w.)
 
-#### process_ui_model_choice ####
+### process_ui_model_choice ###
 
 processes an incoming "model choice" message from the attached UI containing the AI model the user has chosen.
 
 (t.b.w.)
 
-#### process_ui_download_continuation ####
+### process_ui_download_continuation ###
 
 processes an incoming "download continuation" message from the attached UI for a given URL asking the toolkit to start or continue a download from that URL.
 
 (t.b.w.)
 
-#### process_ui_download_cancellation ####
+### process_ui_download_cancellation ###
 
 processes an incoming "download cancellation" message from the attached UI for a given URL asking the toolkit to cancel a download from that URL.
 
 (t.b.w.)
 
-#### process_ui_data_response ####
+### process_ui_data_response ###
 
 processes an incoming "data response" message from the attached UI containing the user's response to a previously issued "data request" message (see above).
 
 (t.b.w.)
 
-#### process_ui_request ####
+### process_ui_request ###
 
 processes an incoming "action request" message from the attached UI asking the toolkit to perform a given operation (such as a text completion).
 
 (t.b.w.)
 
-#### process_ui_cancellation ####
+### process_ui_cancellation ###
 
 processes an incoming "action cancellation" message from the attached UI asking the toolkit to cancel a given operation.
 
