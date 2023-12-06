@@ -98,11 +98,11 @@ The toolkit currently consists of the following nodes:
 
 This node can be used to configure the Node-RED AI Toolkit according to your specific needs. Uusually, it is invoked upon node deployment (or at server startup) and then never used again
 
-##### relevant `msg` Properties on Input #####
+**relevant `msg` Properties on Input**
 
 (none)
 
-##### relevant `msg` Properties on Output #####
+**relevant `msg` Properties on Output**
 
 * **`msg.ToolkitVersion`** - contains the most recently released version of this Toolkit
 
