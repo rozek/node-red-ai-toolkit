@@ -231,6 +231,8 @@ tries to apply a given prompt to a given text returning either `yes` or `no` onl
 
 ### Nodes for Additional Functionalities ###
 
+The following nodes provide additional, often required functions
+
 #### detect_language ####
 
 (t.b.w.)
@@ -248,6 +250,8 @@ tries to apply a given prompt to a given text returning either `yes` or `no` onl
 (t.b.w.)
 
 ### Nodes for the Key-Value Store ###
+
+The following nodes may be used to access the built-in Key-Value Store
 
 #### load_key_store ####
 
@@ -282,6 +286,8 @@ tries to apply a given prompt to a given text returning either `yes` or `no` onl
 (t.b.w.)
 
 ### nodes for the Vector Store ###
+
+The following nodes can be used to access the built-in Vector Store
 
 #### load_vector_store ####
 
@@ -320,6 +326,8 @@ tries to apply a given prompt to a given text returning either `yes` or `no` onl
 (t.b.w.)
 
 ### Nodes for the UI ###
+
+This toolkit directly supports web-based user interfaces created with the [Node-RED UIBuilder](https://github.com/TotallyInformation/node-red-contrib-uibuilder). The following nodes can be used to interact with such a user interface
 
 #### send_ui_reset ####
 
