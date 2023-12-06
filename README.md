@@ -504,12 +504,12 @@ A "known AI model" is a model for which a JavaScript object with its most import
 
 A proper model specification contains the following properties
 
-* **`Model`**
-* **`ModelURL`**
-* **`Creator`**
-* **`CreatorURL`**
-* **`DocumentationURL`**
-* **`Architecture`**
+* **`Model`** - mandatorially specifies the name of a model
+* **`ModelURL`** - optionally contains a URL for the model description (such as a Hugging Face "model card") 
+* **`Creator`** - optionally contains the name of the model creator
+* **`CreatorURL`** - optionally contains a URL for the model creator's web site
+* **`DocumentationURL`** - optionally contains a URL with additional documentation (such as a technical report) for the model
+* **`Architecture`** - mandatorially specifies the underlying model architecture (such as `llama`, `stablelm`, `gptneox` or `rwkv`, which is important for the toolkit to chose the correct executable for the model)
 * **`Purposes`** - optionally contains a list (i.e., a JavaScript array) with one or multiple foreseen use cases of this model (see below for details)
 * **`Templates`** - mandatorially contains a set of templates which are used to convert a list of messages into a model prompt (see below for details)
 * **`ContextLimit`** - mandatorially contains the max. number of tokens this model supports
