@@ -292,7 +292,7 @@ writes a given key-value store collection as a whole onto the file system.
 
 #### list_in_key_store ####
 
-lists either all key-value store collections or all entries of a given key-value store collection.
+lists either the names of all key-value store collections or the keys of all entries of a given key-value store collection.
 
 (t.b.w.)
 
@@ -316,47 +316,73 @@ performs a simple full-text search over all entries of a given key-value store c
 
 #### remove_from_key_store ####
 
-removes a single entry from a given key-value store collection.
+removes either a single entry from a given key-value store collection or a whole key-value store collection.
 
 (t.b.w.)
 
 ### nodes for the Vector Store ###
 
-The following nodes can be used to access the built-in Vector Store
+The following nodes can be used to access the built-in Vector Store. That store resembles very much the "Key-Value Store" mentioned before, but additionally supports a "similarity search" using embedding vectors calculated by an AI model (nota bene: for compatibility reasons, all vectors should be calculated using the same AI model)
+
+The vector store is organized into separate independent "collections" with "entries" addressed by literal "keys". Any entry has the following structure:
+
+* **`Collection`** - the name of the collection this entry is part of
+* **`Embedding`** - an embedding vector associated with this entry. Usually, the `Embedding` is calculated either from the `Key` or the `Value` of an entry. If missing, the `Embedding` is derived from the given `Key`
+* **`Key`** - the literal key this entry is stored under. If missing, the `Value` is also used as a key
+* **`Value`** - the primary content of this entry
+* **`Info`** - an optional JavaScript object with additional (usually application-specific) meta data for this entry
 
 #### load_vector_store ####
+
+loads a given vector store collection as a whole from the file system.
 
 (t.b.w.)
 
 #### patch_vector_store ####
 
+writes a single vector store collection entry onto the file system.
+
 (t.b.w.)
 
 #### save_vector_store ####
+
+writes a given vector store collection as a whole onto the file system.
 
 (t.b.w.)
 
 #### list_in_vector_store ####
 
+lists either the names of all vector store collections or the keys of all entries of a given vector store collection.
+
 (t.b.w.)
 
 #### get_from_vector_store ####
+
+reads a single entry from a given vector store collection.
 
 (t.b.w.)
 
 #### put_to_vector_store ####
 
+writes a single entry into a given vector store collection (overwriting any previous contents).
+
 (t.b.w.)
 
 #### find_in_vector_store ####
+
+performs a simple full-text search over all entries of a given vector store collection and returns the keys of the first 1...n (or all) matching entries.
 
 (t.b.w.)
 
 #### locate_in_vector_store ####
 
+performs a "similarity search" based on the "cosine similarity" between (the embedding vector of) each entry of a given vector collection and (the embedding vector of) a given search text and returns (0),1...n matching entries sorted by descending similarity. If desired, a similarity threshold may be specified to consider really similar entries only
+
 (t.b.w.)
 
 #### remove_from_vector_store ####
+
+removes either a single entry from a given vector store collection or a whole vector store collection.
 
 (t.b.w.)
 
