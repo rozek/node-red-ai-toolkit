@@ -42,31 +42,40 @@ The toolkit currently consists of the following nodes:
 * **[try_to_]extract_response_from_text** - runs a "text completion" with a request that is applied to a given text<br>&nbsp;<br>
 * **generate_function** - generates a (JavaScript) function
 * **evaluate_function** - runs a given (JavaScript) function in a sandbox<br>&nbsp;<br>
-* **list_in_key_store**
-* **read_from_key_store**
-* **write_to_key_store**
-* **find_in_key_store**
-* **remove_from_key_store**<br>&nbsp;<br>
-* **list_in_vector_store**
-* **read_from_vector_store**
-* **write_to_vector_store**
-* **find_in_vector_store**
-* **locate_in_vector_store**
-* **remove_from_vector_store**<br>&nbsp;<br>
-* **send_ui_reset**
-* **send_ui_state**
-* **send_ui_data**
-* **send_ui_model_list**
-* **send_ui_download_progress**
-* **send_ui_notice**
-* **send_ui_message_list**
-* **send_ui_progress**
-* **send_ui_response**<br>&nbsp;<br>
-* **process_ui_model**
-* **process_ui_download_interruption/continuation/cancellation**
-* **process_ui_feedback**
-* **process_ui_request**
-* **process_ui_cancellation**
+* **load_key_store** - reads a complete key-value store collection from the file system
+* **patch_key_store** - writes a given key-value store collection entry to the file system
+* **save_key_store** - writes a complete key-value store collection to the file system
+* **list_in_key_store** - lists all collections (or the keys of a given collection) in the key-value store
+* **get_from_key_store** - reads a given collection entry from the key-value store
+* **put_to_key_store** - writes a given collection entry to the key-value store
+* **find_in_key_store** - performs a full-text search over a given collection in the key-value store
+* **remove_from_key_store** - removes a given collection entry (or a whole collection) from the key-value store<br>&nbsp;<br>
+* **load_vector_store** - reads a complete vector store collection from the file system
+* **patch_vector_store** - writes a given vector store collection entry to the file system
+* **save_vector_store** - writes a complete vector store collection to the file system
+* **list_in_vector_store** - lists all collections (or the keys of a given collection) in the vector store
+* **get_from_vector_store** - reads a given collection entry from the vector store
+* **put_to_vector_store** - writes a given collection entry to the vector store
+* **find_in_vector_store** - performs a full-text search over a given collection in the vector store
+* **locate_in_vector_store** - uses "cosine similarity" to locate one or multiple entries close to a given embedding vector in the vector store
+* **remove_from_vector_store** - removes a given collection entry (or a whole collection) from the vector store<br>&nbsp;<br>
+* **send_ui_reset** - sends a "reset" request (opt. providing explicit default settings) to the UI
+* **send_ui_state** - sends an application-specific state to the UI
+* **send_ui_data** - sends application-specific data to the UI
+* **send_ui_known_model_list** - sends a list of all currently known models to the UI
+* **send_ui_available_model_list** - sends a list of all currently available models to the UI
+* **send_ui_download_progress** - sends a progress report for a given file download
+* **send_ui_notice** - sends a "notice" to the UI (which may be shown as a "toast" or within a notice bar)
+* **send_ui_message_list** - sends a complete list of messages to the UI
+* **send_ui_progress** - sends a (text or chat) completion progress report to the UI
+* **send_ui_data_request** - sends a request for additional input data to the UI<br>&nbsp;<br>
+* **send_ui_response** - sends the final output of a (text or chat) completion to the UI
+* **process_ui_model_choice** - processes an incoming model choice from the UI
+* **process_ui_download_continuation** - processes an incoming file download continuation request from the UI
+* **process_ui_download_cancellation** - processes an incoming file download cancellation request from the UI
+* **process_ui_data_response** - processes an incoming reponse to a previously sent enquiry for additional information
+* **process_ui_request** - processes an incoming (text or chat) completion  request from the UI
+* **process_ui_cancellation** - processes an incoming completion cancellation request from the UI
 
 
 
