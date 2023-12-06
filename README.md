@@ -36,7 +36,8 @@ The toolkit currently consists of the following nodes:
 * **summarize_text** - summarizes a given text<br>&nbsp;<br>
 * **[try_to_]extract_search_string_from_text** - constructs a search engine prompt from a given text
 * **[try_to_]extract_decision_from_text** - runs a "text completion" with the possible results `yes` or `no` (or `unknown`)
-* **[try_to_]extract_[json]_list_from_text** - runs a "text completion" and returns either a newline-separated list of strings or a list of JavaScript strings in JSON format
+* **[try_to_]extract_list_from_text** - runs a "text completion" and returns a newline-separated list of strings
+* **[try_to_]extract_json_list_from_text** - runs a "text completion" and returns a list of JavaScript strings in JSON format
 * **[try_to_]extract_response_from_text** - runs a "text completion" with a request that is applied to a given text<br>&nbsp;<br>
 * **detect_language** - tries to detect the language of a given text
 * **translate_language** - translates a given text from one language into another<br>&nbsp;<br>
@@ -81,9 +82,13 @@ The toolkit currently consists of the following nodes:
 
 #### configure_toolkit ####
 
+This node can be used to configure the Node-RED AI Toolkit according to your specific needs. Uusually, it is invoked upon node deployment (or at server startup) and then never used again
+
 (t.b.w.)
 
 #### list_configuration ####
+
+returns a set of all configuration settings
 
 (t.b.w.)
 
@@ -91,56 +96,56 @@ The toolkit currently consists of the following nodes:
 
 starts a REST request against this repository to check whether there is a new version of this toolkit. Right now, there is no possibility to automatically update the nodes in a flow from within Node-RED - thus, your application should just display a notice and let the user replace the existing toolkit flow with a new one when necessary.
 
-(t.b.c.)
+(t.b.w.)
 
 #### check_for_model_updates ####
 
 starts a REST request against this repository to check whether there is a new version of the "official" 
 list of "known" AI models. If so, you may use the node `update_known_models` to download the new list and store it locally in your configured `ModelFolder`.
 
-(t.b.c.)
+(t.b.w.)
 
 #### update_known_models ####
 
 starts a REST request against this repository to download the current list of "officially known" AI models and store it locally in your configured `ModelFolder`.
 
-(t.b.c.)
+(t.b.w.)
 
 #### list_known_models ####
 
 constructs a list of all currently "known" AI models (including official ones from this repository and locally taught models) and their characteristics (such as the program required for text completion, the recommended prompt structure and the maximal context length).
 
-(t.b.c.)
+(t.b.w.)
 
 #### list_available_models ####
 
 constructs a list of all currently installed AI models (together with their characteristics as stored in the model set).
 
-(t.b.c.)
+(t.b.w.)
 
 #### list_pending_models ####
 
 constructs a list of all AI models which are currently being downloaded (together with their download progress).
 
-(t.b.c.)
+(t.b.w.)
 
 #### learn_model ####
 
 adds a given model to the local set of "known" AI models. You may either add a new model or change the characteristics of an already existing one.
 
-(t.b.c.)
+(t.b.w.)
 
 #### unlearn_model ####
 
 removes a given model to the local set of "known" AI models. You may remove locally "taught" models as well as "officially known" ones. It is safe to remove a non-existent model.
 
-(t.b.c.)
+(t.b.w.)
 
 #### download_file ####
 
 starts downloading a file from a given URL into a gien target folder. It is forbidden to download a file which is already being downloaded - unless the download was interrupted for any reason (such as a server or network failure) in which case the toolkit tries to resume the download (or, if that is not supported by the server, to restart it)
 
-(t.b.c.)
+(t.b.w.)
 
 #### cancel_download ####
 
@@ -154,55 +159,69 @@ The following nodes are directly related to AI models and their usage
 
 #### format_prompt ####
 
-takes a list of (properly constructed) messages and creates a "prompt" for a given AI model. This prompt may then by sent to a `complete_text` node
+takes a list of (properly constructed) messages and creates a "prompt" for a given AI model. This prompt may then by sent to a `complete_text` node.
 
 (t.b.w.)
 
 #### complete_text ####
 
-takes a given text prompt and runs a text completion using a given model with given settings
+takes a given text prompt and runs a text completion using a given model with given settings.
 
 (t.b.w.)
 
 #### complete_chat ####
 
-takes a list of (properly constructed) messages, converts them into a prompt and runs a text completion using a given model with given settings. Basically, this node is just a concatenation of `format_prompt` and `complete_text`
+takes a list of (properly constructed) messages, converts them into a prompt and runs a text completion using a given model with given settings. Basically, this node is just a concatenation of `format_prompt` and `complete_text`.
 
 (t.b.w.)
 
 #### tokenize_text ####
 
-tokenizes a given text using a given model, producing a list of tokens given by their internal code and the corresponding (sequence of) characters
+tokenizes a given text using a given model, producing a list of tokens given by their internal code and the corresponding (sequence of) characters.
 
 (t.b.w.)
 
 #### calculate_embedding ####
 
-calculates the embedding vector for a given text using a given model. This vector may then be used, e.g., as an index of some content in a vector database which may then be found by a "similarity search"
+calculates the embedding vector for a given text using a given model. This vector may then be used, e.g., as an index of some content in a vector database which may then be found by a "similarity search".
 
 (t.b.w.)
 
 #### split_text ####
 
+takes a given text and tries to split it into "chunks" (short enough to be processed by a given AI model) in an "intelligent" way, i.e., without splitting paragraphs, sentences or words. This split requires the given text to be "tokenized" unless the list of tokens for the given text exists already.
+
 (t.b.w.)
 
 #### assemble_text ####
+
+takes a given list of chunks and joins them into a single text. If all chunks were provided with their associated token lists, the resulting text will have an associated token list as well.
 
 (t.b.w.)
 
 #### summarize_text ####
 
+tries to summarize a given text. if this text is too long to be summarized in a single run, it will be split into chunks, summarized chunk by chunk and these summaries then by re-assembled into the final result. Depending on the size of the original text (compared to the context length of AI model used), several such rounds may be necessary before a response can be issued
+
 (t.b.w.)
 
 #### [try_to_]extract_search_string_from_text ####
+
+tries to construct one or several search engine prompts from a given text
 
 (t.b.w.)
 
 #### [try_to_]extract_decision_from_text ####
 
+tries to apply a given prompt to a given text returning either `yes` or `no` only (if `extract_decision_from_text` is used) or one of `yes`, `no` or `unknown` (if `try_to_extract_decision_from_text` is used). Please note, that the given prompt must tell the used AI model to only respond with one of the permitted keywords - this node then asserts the proper output
+
 (t.b.w.)
 
-#### [try_to_]extract_[json]_list_from_text ####
+#### [try_to_]extract_list_from_text ####
+
+(t.b.w.)
+
+#### [try_to_]extract_json_list_from_text ####
 
 (t.b.w.)
 
