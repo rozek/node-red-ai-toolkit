@@ -77,6 +77,8 @@ The toolkit currently consists of the following nodes:
 * **process_ui_request** - processes an incoming (text or chat) completion  request from the UI
 * **process_ui_cancellation** - processes an incoming completion cancellation request from the UI
 
+### Configuration- and Resource-related Nodes ###
+
 #### configure_toolkit ####
 
 (t.b.w.)
@@ -125,6 +127,8 @@ The toolkit currently consists of the following nodes:
 
 (t.b.w.)
 
+### AI-related Nodes ###
+
 #### format_prompt ####
 
 (t.b.w.)
@@ -142,14 +146,6 @@ The toolkit currently consists of the following nodes:
 (t.b.w.)
 
 #### calculate_embedding ####
-
-(t.b.w.)
-
-#### detect_language ####
-
-(t.b.w.)
-
-#### translate_language ####
 
 (t.b.w.)
 
@@ -181,6 +177,16 @@ The toolkit currently consists of the following nodes:
 
 (t.b.w.)
 
+### Nodes for Additional Functionalities ###
+
+#### detect_language ####
+
+(t.b.w.)
+
+#### translate_language ####
+
+(t.b.w.)
+
 #### generate_function ####
 
 (t.b.w.)
@@ -188,6 +194,8 @@ The toolkit currently consists of the following nodes:
 #### evaluate_function ####
 
 (t.b.w.)
+
+### Nodes for the Key-Value Store ###
 
 #### load_key_store ####
 
@@ -220,6 +228,8 @@ The toolkit currently consists of the following nodes:
 #### remove_from_key_store ####
 
 (t.b.w.)
+
+### nodes for the Vector Store ###
 
 #### load_vector_store ####
 
@@ -256,6 +266,8 @@ The toolkit currently consists of the following nodes:
 #### remove_from_vector_store ####
 
 (t.b.w.)
+
+### Nodes for the UI ###
 
 #### send_ui_reset ####
 
