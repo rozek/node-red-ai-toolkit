@@ -392,69 +392,103 @@ This toolkit directly supports web-based user interfaces created with the [Node-
 
 #### send_ui_reset ####
 
+sends a "Reset" request to the attached UI, optionally along with explicit default settings. It is up to the UI to ignore this message or react properly.
+
 (t.b.w.)
 
 #### send_ui_state ####
+
+sends an application-specific "state" object to the attached UI. It is up to the UI to ignore this message or react properly.
 
 (t.b.w.)
 
 #### send_ui_data ####
 
+sends an application-specific "data" object to the attached UI. It is up to the UI to ignore this message or react properly.
+
 (t.b.w.)
 
 #### send_ui_known_model_list ####
+
+sends a list of all _known_ AI models (and their characteristics) to the attached UI. It is up to the UI to ignore this message or react properly.
 
 (t.b.w.)
 
 #### send_ui_available_model_list ####
 
+sends a list of all actually _available_ AI models (and their characteristics) to the attached UI. It is up to the UI to ignore this message or react properly.
+
 (t.b.w.)
 
 #### send_ui_download_progress ####
+
+sends a "download progress" message for a given URL to the attached UI. It is up to the UI to ignore this message or react properly.
 
 (t.b.w.)
 
 #### send_ui_notice ####
 
+sends a "notice" message of a given type (either `error`, `warning` or `info`) to the attached UI. It is up to the UI to ignore this message or react properly.
+
 (t.b.w.)
 
 #### send_ui_message_list ####
+
+sends a complete (chat) message list to the attached UI. It is up to the UI to ignore this message or react properly.
 
 (t.b.w.)
 
 #### send_ui_progress ####
 
+sends an "action progress" message to the attached UI. It is up to the UI to ignore this message or react properly.
+
 (t.b.w.)
 
 #### send_ui_data_request ####
+
+sends a "data request" message to the attached UI by which an action requests additional input from the user. The UI should handle this message (usually by displaying the request and waiting for the user to enter some text) and send the user input back (see below).
 
 (t.b.w.)
 
 #### send_ui_response ####
 
+sends the ultimate response of an action to the attached UI. The UI should append this response in its internal (chat) message list or update a previous version of that response.
+
 (t.b.w.)
 
 #### process_ui_model_choice ####
+
+processes an incoming "model choice" message from the attached UI containing the AI model the user has chosen.
 
 (t.b.w.)
 
 #### process_ui_download_continuation ####
 
+processes an incoming "download continuation" message from the attached UI for a given URL asking the toolkit to start or continue a download from that URL.
+
 (t.b.w.)
 
 #### process_ui_download_cancellation ####
+
+processes an incoming "download cancellation" message from the attached UI for a given URL asking the toolkit to cancel a download from that URL.
 
 (t.b.w.)
 
 #### process_ui_data_response ####
 
+processes an incoming "data response" message from the attached UI containing the user's response to a previously issued "data request" message (see above).
+
 (t.b.w.)
 
 #### process_ui_request ####
 
+processes an incoming "action request" message from the attached UI asking the toolkit to perform a given operation (such as a text completion).
+
 (t.b.w.)
 
 #### process_ui_cancellation ####
+
+processes an incoming "action cancellation" message from the attached UI asking the toolkit to cancel a given operation.
 
 (t.b.w.)
 
