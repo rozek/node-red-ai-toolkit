@@ -397,10 +397,44 @@ This toolkit directly supports web-based user interfaces created with the [Node-
 
 (t.b.w.)
 
+## Configuration Specification ##
 
+A "toolkit configuration" is a JavaScript object with the following properties
 
+* (t.b.w.)
 
+## AI Model Specification ##
 
+A "known AI model" is a model for which a JavaScript object with its most important characteristics exists. The specifications of some recommended models are already part of this toolkit, but you may equally well download other model files (provided that they are compatible with the existing executables) and add a proper specification for them yourself
+
+A proper model specification contains the following properties
+
+* **`Model`**
+* **`ModelURL`**
+* **`Creator`**
+* **`CreatorURL`**
+* **`DocumentationURL`**
+* **`Architecture`**
+* **`Purposes`** - optionally contains a list (i.e., a JavaScript array) with one or multiple foreseen use cases of this model (see below for details)
+* **`Templates`** - mandatorially contains a set of templates which are used to convert a list of messages into a model prompt (see below for details)
+* **`ContextLimit`** - mandatorially contains the max. number of tokens this model supports
+* **`ReversePrompts`** - optionally contains a list (i.e., a JavaScript array) with up to four strings that may be used as "reverse prompts" for llama.cpp
+* **`License`** - optionally contains the name of the model license
+* **`LicenseURL`** - optionally contains the URL of a document that describes the model license in its detail
+
+The following use cases are supported by this toolkit
+
+* **`text`** - the model can be used to generate general text
+* **`code`** - the model can be used to generate program source code
+* **`embeddings`** - the model can be used to calculate an embedding vector
+
+The `Templates` characteristic is a JavaScript object with the following properties
+
+* **`Prefix`**
+* **`System`**
+* **`User`**
+* **`Assistant`**
+* **`Suffix`**
 
 
 
