@@ -31,8 +31,6 @@ The toolkit currently consists of the following nodes:
 * **complete_chat** - performs a message list completion
 * **tokenize_text** - tokenizes a given text
 * **calculate_embedding** - calculates the embedding vector for a given text<br>&nbsp;<br>
-* **detect_language** - tries to detect the language of a given text
-* **translate_language** - translates a given text from one language into another<br>&nbsp;<br>
 * **split_text** - splits a long text into chunks suitable for a given model
 * **assemble_text** - reassembles a split text (e.g., after chunk-wise processing)<br>&nbsp;<br>
 * **summarize_text** - summarizes a given text<br>&nbsp;<br>
@@ -40,6 +38,8 @@ The toolkit currently consists of the following nodes:
 * **[try_to_]extract_decision_from_text** - runs a "text completion" with the possible results `yes` or `no` (or `unknown`)
 * **[try_to_]extract_[json]_list_from_text** - runs a "text completion" and returns either a newline-separated list of strings or a list of JavaScript strings in JSON format
 * **[try_to_]extract_response_from_text** - runs a "text completion" with a request that is applied to a given text<br>&nbsp;<br>
+* **detect_language** - tries to detect the language of a given text
+* **translate_language** - translates a given text from one language into another<br>&nbsp;<br>
 * **generate_function** - generates a (JavaScript) function
 * **evaluate_function** - runs a given (JavaScript) function in a sandbox<br>&nbsp;<br>
 * **load_key_store** - reads a complete key-value store collection from the file system
