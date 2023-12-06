@@ -512,8 +512,8 @@ A proper model specification contains the following properties
 * **`Architecture`** - mandatorially specifies the underlying model architecture (such as `llama`, `stablelm`, `gptneox` or `rwkv`, which is important for the toolkit to chose the correct executable for the model)
 * **`Purposes`** - optionally contains a list (i.e., a JavaScript array) with one or multiple foreseen use cases of this model (see below for details)
 * **`Languages`** - optionally contains a list (i.e., a JavaScript array) of the (spoken and programming) languages the model supports
-* **`Benchmarks`** - optionally contains a set (i.e., JavaScript object) with the model's benchmark results as published in the Hugging Face [Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
-* **`Quantizations`** - mandatorially contains a set of quantizations for this model (see below)
+* **`Benchmarks`** - optionally contains a set (i.e., JavaScript object) with the model's benchmark results as published in the Hugging Face [Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) (see below for details)
+* **`Quantizations`** - mandatorially contains a set of quantizations for this model (see below for details)
 * **`Templates`** - mandatorially contains a set of templates which are used to convert a list of messages into a model prompt (see below for details)
 * **`ContextLimit`** - mandatorially contains the max. number of tokens this model supports
 * **`ReversePrompts`** - optionally contains a list (i.e., a JavaScript array) with up to four strings that may be used as "reverse prompts" for llama.cpp
@@ -525,6 +525,18 @@ The following use cases are supported by this toolkit:
 * **`text`** - the model can be used to generate general text
 * **`code`** - the model can be used to generate program source code
 * **`embeddings`** - the model can be used to calculate an embedding vector
+
+The `Benchmarks` characteristic is a JavaScript object whose properties have the name of one of the benchmarks used in the Hugging Face [Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) and the result of the related benchmark as their value. Currently, the Leaderboard considers the following benchmarks
+
+* **`Average`** - not a benchmark by itself but the average rating of all other ones
+* **`ARC`** - [AI2 Reasoning Challenge](https://arxiv.org/abs/1803.05457) (25-shot) - a set of grade-school science questions
+* **`HellaSwag`** - [HellaSwag](https://arxiv.org/abs/1905.07830) (10-shot) - a test of commonsense inference, which is easy for humans (~95%) but challenging for SOTA models
+* **`MMLU`** - [MMLU](https://arxiv.org/abs/2009.03300) (5-shot) - a test to measure a text model's multitask accuracy. The test covers 57 tasks including elementary mathematics, US history, computer science, law, and more
+* **`TruthfulQA`** - [TruthfulQA](https://arxiv.org/abs/2109.07958) (0-shot) - a test to measure a model's propensity to reproduce falsehoods commonly found online
+* **`Winogrande`** - [Winogrande](https://arxiv.org/abs/1907.10641) (5-shot) - an adversarial and difficult Winograd benchmark at scale, for commonsense reasoning
+* **`GSM8K`** - [GSM8k](https://arxiv.org/abs/2110.14168) (5-shot) - diverse grade school math word problems to measure a model's ability to solve multi-step mathematical reasoning problems
+
+The descriptions were directly taken from the Leaderboard's "About" page
 
 The `Quantizations` characteristic is a JavaScript object whose properties are named by an available quatization (such as `q8_0`, `q5_k_m`, or similar, always given in lowercase) and contain a quantization specification object with the following properties:
 
