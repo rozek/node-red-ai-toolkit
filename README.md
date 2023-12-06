@@ -89,63 +89,96 @@ The toolkit currently consists of the following nodes:
 
 #### check_for_toolkit_updates ####
 
-(t.b.w.)
+starts a REST request against this repository to check whether there is a new version of this toolkit. Right now, there is no possibility to automatically update the nodes in a flow from within Node-RED - thus, your application should just display a notice and let the user replace the existing toolkit flow with a new one when necessary.
+
+(t.b.c.)
 
 #### check_for_model_updates ####
 
-(t.b.w.)
+starts a REST request against this repository to check whether there is a new version of the "official" 
+list of "known" AI models. If so, you may use the node `update_known_models` to download the new list and store it locally in your configured `ModelFolder`.
+
+(t.b.c.)
 
 #### update_known_models ####
 
-(t.b.w.)
+starts a REST request against this repository to download the current list of "officially known" AI models and store it locally in your configured `ModelFolder`.
+
+(t.b.c.)
 
 #### list_known_models ####
 
-(t.b.w.)
+constructs a list of all currently "known" AI models (including official ones from this repository and locally taught models) and their characteristics (such as the program required for text completion, the recommended prompt structure and the maximal context length).
+
+(t.b.c.)
 
 #### list_available_models ####
 
-(t.b.w.)
+constructs a list of all currently installed AI models (together with their characteristics as stored in the model set).
+
+(t.b.c.)
 
 #### list_pending_models ####
 
-(t.b.w.)
+constructs a list of all AI models which are currently being downloaded (together with their download progress).
+
+(t.b.c.)
 
 #### learn_model ####
 
-(t.b.w.)
+adds a given model to the local set of "known" AI models. You may either add a new model or change the characteristics of an already existing one.
+
+(t.b.c.)
 
 #### unlearn_model ####
 
-(t.b.w.)
+removes a given model to the local set of "known" AI models. You may remove locally "taught" models as well as "officially known" ones. It is safe to remove a non-existent model.
+
+(t.b.c.)
 
 #### download_file ####
 
-(t.b.w.)
+starts downloading a file from a given URL into a gien target folder. It is forbidden to download a file which is already being downloaded - unless the download was interrupted for any reason (such as a server or network failure) in which case the toolkit tries to resume the download (or, if that is not supported by the server, to restart it)
+
+(t.b.c.)
 
 #### cancel_download ####
+
+cancels an ongoing file download and removes what has been downloaded before. Cancelling an already completed download is forbidden
 
 (t.b.w.)
 
 ### AI-related Nodes ###
 
+The following nodes are directly related to AI models and their usage
+
 #### format_prompt ####
+
+takes a list of (properly constructed) messages and creates a "prompt" for a given AI model. This prompt may then by sent to a `complete_text` node
 
 (t.b.w.)
 
 #### complete_text ####
 
+takes a given text prompt and runs a text completion using a given model with given settings
+
 (t.b.w.)
 
 #### complete_chat ####
+
+takes a list of (properly constructed) messages, converts them into a prompt and runs a text completion using a given model with given settings. Basically, this node is just a concatenation of `format_prompt` and `complete_text`
 
 (t.b.w.)
 
 #### tokenize_text ####
 
+tokenizes a given text using a given model, producing a list of tokens given by their internal code and the corresponding (sequence of) characters
+
 (t.b.w.)
 
 #### calculate_embedding ####
+
+calculates the embedding vector for a given text using a given model. This vector may then be used, e.g., as an index of some content in a vector database which may then be found by a "similarity search"
 
 (t.b.w.)
 
