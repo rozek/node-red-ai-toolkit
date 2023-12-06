@@ -98,13 +98,7 @@ The toolkit currently consists of the following nodes:
 
 This node can be used to configure the Node-RED AI Toolkit according to your specific needs. Uusually, it is invoked upon node deployment (or at server startup) and then never used again
 
-**relevant `msg` Properties on Input**
-
-(none)
-
-**relevant `msg` Properties on Output**
-
-* **`msg.ToolkitVersion`** - contains the most recently released version of this Toolkit
+(t.b.w.)
 
 ### list_configuration ###
 
@@ -116,14 +110,38 @@ returns a set of all configuration settings
 
 starts a REST request against this repository to check whether there is a new version of this toolkit. Right now, there is no possibility to automatically update the nodes in a flow from within Node-RED - thus, your application should just display a notice and let the user replace the existing toolkit flow with a new one when necessary.
 
-(t.b.w.)
+**relevant `msg` Properties on Input**
+
+* (none)
+
+**relevant `msg` Properties on Output**
+
+* **`msg.ToolkitVersion`** - contains the most recently released version of this Toolkit
+
+This node has three outputs
+
+1. one for a successful operation where the toolkit seems to be up-to-date
+2. one for an operation failure and
+3. one for a successful operation where the toolkit seems to be outdated
 
 ### check_for_model_updates ###
 
 starts a REST request against this repository to check whether there is a new version of the "official" 
 list of "known" AI models. If so, you may use the node `update_known_models` to download the new list and store it locally in your configured `ModelFolder`.
 
-(t.b.w.)
+**relevant `msg` Properties on Input**
+
+* (none)
+
+**relevant `msg` Properties on Output**
+
+* **`msg.ModelSetVersion`** - contains the most recently released version of the set of known AI models
+
+This node has three outputs
+
+1. one for a successful operation where the internal model set seems to be up-to-date
+2. one for an operation failure and
+3. one for a successful operation where the internal model set seems to be outdated
 
 ### update_known_models ###
 
