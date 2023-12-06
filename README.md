@@ -511,19 +511,31 @@ A proper model specification contains the following properties
 * **`DocumentationURL`** - optionally contains a URL with additional documentation (such as a technical report) for the model
 * **`Architecture`** - mandatorially specifies the underlying model architecture (such as `llama`, `stablelm`, `gptneox` or `rwkv`, which is important for the toolkit to chose the correct executable for the model)
 * **`Purposes`** - optionally contains a list (i.e., a JavaScript array) with one or multiple foreseen use cases of this model (see below for details)
+* **`Languages`** - optionally contains a list (i.e., a JavaScript array) of the (spoken and programming) languages the model supports
+* **`Benchmarks`** - optionally contains a set (i.e., JavaScript object) with the model's benchmark results as published in the Hugging Face [Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+* **`Quantizations`** - mandatorially contains a set of quantizations for this model (see below)
 * **`Templates`** - mandatorially contains a set of templates which are used to convert a list of messages into a model prompt (see below for details)
 * **`ContextLimit`** - mandatorially contains the max. number of tokens this model supports
 * **`ReversePrompts`** - optionally contains a list (i.e., a JavaScript array) with up to four strings that may be used as "reverse prompts" for llama.cpp
 * **`License`** - optionally contains the name of the model license
 * **`LicenseURL`** - optionally contains the URL of a document that describes the model license in its detail
 
-The following use cases are supported by this toolkit
+The following use cases are supported by this toolkit:
 
 * **`text`** - the model can be used to generate general text
 * **`code`** - the model can be used to generate program source code
 * **`embeddings`** - the model can be used to calculate an embedding vector
 
-The `Templates` characteristic is a JavaScript object with the following properties
+The `Quantizations` characteristic is a JavaScript object whose properties are named by an available quatization (such as `q8_0`, `q5_k_m`, or similar, always given in lowercase) and contain a quantization specification object with the following properties:
+
+* **`Quantization`** - mandatorially contains the described quantization (which is also used as the key for this object)
+* **`FileURL`** - mandatorially contains the URL where the described quantization may be downloaded
+* **`FileSize`** - optionally contains the size of the file to be downloaded. Please note: an interrupted file download may only be recognized as such (and then be resumed) if the file size is given and exact
+* **`RAM`** - optionally contains the amount of RAM needed to run a text inference with a context size of 512
+* **`Speed`** - optionally contains the time needed to generate an output token running a text inference with a context size of 512
+* **`Perplexity`** - optionally contains the "perplexity" of the given quantization (in order to be able to decide which quantization to use)
+
+The `Templates` characteristic is a JavaScript object with the following properties:
 
 * **`Prefix`**
 * **`System`**
