@@ -81,249 +81,250 @@ The toolkit currently consists of the following nodes:
 
 (t.b.w.)
 
-### list_configuration ###
+#### list_configuration ####
 
 (t.b.w.)
 
-### check_for_toolkit_updates ###
+#### check_for_toolkit_updates ####
 
 (t.b.w.)
 
-### check_for_model_updates ###
+#### check_for_model_updates ####
 
 (t.b.w.)
 
-### update_known_models ###
+#### update_known_models ####
 
 (t.b.w.)
 
-### list_known_models ###
+#### list_known_models ####
 
 (t.b.w.)
 
-### list_available_models ###
+#### list_available_models ####
 
 (t.b.w.)
 
-### list_pending_models ###
+#### list_pending_models ####
 
 (t.b.w.)
 
-### learn_model ###
+#### learn_model ####
 
 (t.b.w.)
 
-### unlearn_model ###
+#### unlearn_model ####
 
 (t.b.w.)
 
-### download_file ###
+#### download_file ####
 
 (t.b.w.)
 
-### cancel_download ###
+#### cancel_download ####
 
 (t.b.w.)
 
-### format_prompt ###
+#### format_prompt ####
 
 (t.b.w.)
 
-### complete_text ###
+#### complete_text ####
 
 (t.b.w.)
 
-### complete_chat ###
+#### complete_chat ####
 
 (t.b.w.)
 
-### tokenize_text ###
+#### tokenize_text ####
 
 (t.b.w.)
 
-### calculate_embedding ###
+#### calculate_embedding ####
 
 (t.b.w.)
 
-### detect_language ###
+#### detect_language ####
 
 (t.b.w.)
 
-### translate_language ###
+#### translate_language ####
 
 (t.b.w.)
 
-### split_text ###
+#### split_text ####
 
 (t.b.w.)
 
-### assemble_text ###
+#### assemble_text ####
 
 (t.b.w.)
 
-### summarize_text ###
+#### summarize_text ####
 
 (t.b.w.)
 
-### [try_to_]extract_search_string_from_text ###
+#### [try_to_]extract_search_string_from_text ####
 
 (t.b.w.)
 
-### [try_to_]extract_decision_from_text ###
+#### [try_to_]extract_decision_from_text ####
 
 (t.b.w.)
 
-### [try_to_]extract_[json]_list_from_text ###
+#### [try_to_]extract_[json]_list_from_text ####
 
 (t.b.w.)
 
-### [try_to_]extract_response_from_text ###
+#### [try_to_]extract_response_from_text ####
 
 (t.b.w.)
 
-### generate_function ###
+#### generate_function ####
 
 (t.b.w.)
 
-### evaluate_function ###
+#### evaluate_function ####
 
 (t.b.w.)
 
-### load_key_store ###
+#### load_key_store ####
 
 (t.b.w.)
 
-### patch_key_store ###
+#### patch_key_store ####
 
 (t.b.w.)
 
-### save_key_store ###
+#### save_key_store ####
 
 (t.b.w.)
 
-### list_in_key_store ###
+#### list_in_key_store ####
 
 (t.b.w.)
 
-### get_from_key_store ###
+#### get_from_key_store ####
 
 (t.b.w.)
 
-### put_to_key_store ###
+#### put_to_key_store ####
 
 (t.b.w.)
 
-### find_in_key_store ###
+#### find_in_key_store ####
 
 (t.b.w.)
 
-### remove_from_key_store ###
+#### remove_from_key_store ####
 
 (t.b.w.)
 
-### load_vector_store ###
+#### load_vector_store ####
 
 (t.b.w.)
 
-### patch_vector_store ###
+#### patch_vector_store ####
 
 (t.b.w.)
 
-### save_vector_store ###
+#### save_vector_store ####
 
 (t.b.w.)
 
-### list_in_vector_store ###
+#### list_in_vector_store ####
 
 (t.b.w.)
 
-### get_from_vector_store ###
+#### get_from_vector_store ####
 
 (t.b.w.)
 
-### put_to_vector_store ###
+#### put_to_vector_store ####
 
 (t.b.w.)
 
-### find_in_vector_store ###
+#### find_in_vector_store ####
 
 (t.b.w.)
 
-### locate_in_vector_store ###
+#### locate_in_vector_store ####
 
 (t.b.w.)
 
-### remove_from_vector_store ###
+#### remove_from_vector_store ####
 
 (t.b.w.)
 
-### send_ui_reset ###
+#### send_ui_reset ####
 
 (t.b.w.)
 
-### send_ui_state ###
+#### send_ui_state ####
 
 (t.b.w.)
 
-### send_ui_data ###
+#### send_ui_data ####
 
 (t.b.w.)
 
-### send_ui_known_model_list ###
+#### send_ui_known_model_list ####
 
 (t.b.w.)
 
-### send_ui_available_model_list ###
+#### send_ui_available_model_list ####
 
 (t.b.w.)
 
-### send_ui_download_progress ###
+#### send_ui_download_progress ####
 
 (t.b.w.)
 
-### send_ui_notice ###
+#### send_ui_notice ####
 
 (t.b.w.)
 
-### send_ui_message_list ###
+#### send_ui_message_list ####
 
 (t.b.w.)
 
-### send_ui_progress ###
+#### send_ui_progress ####
 
 (t.b.w.)
 
-### send_ui_data_request ###
+#### send_ui_data_request ####
 
 (t.b.w.)
 
-### send_ui_response ###
+#### send_ui_response ####
 
 (t.b.w.)
 
-### process_ui_model_choice ###
+#### process_ui_model_choice ####
 
 (t.b.w.)
 
-### process_ui_download_continuation ###
+#### process_ui_download_continuation ####
 
 (t.b.w.)
 
-### process_ui_download_cancellation ###
+#### process_ui_download_cancellation ####
 
 (t.b.w.)
 
-### process_ui_data_response ###
+#### process_ui_data_response ####
 
 (t.b.w.)
 
-### process_ui_request ###
+#### process_ui_request ####
 
 (t.b.w.)
 
-### process_ui_cancellation ###
+#### process_ui_cancellation ####
 
 (t.b.w.)
+
 
 
 
