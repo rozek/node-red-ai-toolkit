@@ -76,7 +76,7 @@ The toolkit currently consists of the following nodes:
 * **process_ui_download_cancellation** - processes an incoming file download cancellation request from the UI
 * **process_ui_data_response** - processes an incoming reponse to a previously sent enquiry for additional information
 * **process_ui_request** - processes an incoming (text or chat) completion  request from the UI
-* **process_ui_cancellation** - processes an incoming completion cancellation request from the UI
+* **[process_ui_cancellation](https://github.com/rozek/node-red-ai-toolkit#process_ui_cancellation)** - processes an incoming completion cancellation request from the UI
 
 ### Configuration- and Resource-related Nodes ###
 
