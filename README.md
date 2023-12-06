@@ -17,7 +17,8 @@ The toolkit currently consists of the following nodes:
 * **[configure_toolkit](https://github.com/rozek/node-red-ai-toolkit#configure_toolkit)** - configures the toolkit and its nodes
 * **[list_configuration](https://github.com/rozek/node-red-ai-toolkit#list_configuration)** - reveals the current toolkit configuration<br>&nbsp;<br>
 * **[check_for_toolkit_updates](https://github.com/rozek/node-red-ai-toolkit#check_for_toolkit_updates)** - checks for updates of this toolkit
-* **[check_for_model_updates](https://github.com/rozek/node-red-ai-toolkit#check_for_model_updates)** - checks for updates for the set of known AI models<br>&nbsp;<br>
+* **[check_for_model_updates](https://github.com/rozek/node-red-ai-toolkit#check_for_model_updates)** - checks for updates for the set of known AI models
+<br>&nbsp;<br>
 * **[update_known_models](https://github.com/rozek/node-red-ai-toolkit#update_known_models)** - updates the set of known AI models
 * **[list_known_models](https://github.com/rozek/node-red-ai-toolkit#list_known_models)** - lists all known models and their details
 * **[list_available_models](https://github.com/rozek/node-red-ai-toolkit#list_available_models)** - lists all already downloaded models
@@ -538,7 +539,7 @@ The `Benchmarks` characteristic is a JavaScript object whose properties have the
 
 The descriptions were directly taken from the Leaderboard's "About" page
 
-The `Quantizations` characteristic is a JavaScript object whose properties are named by an available quatization (such as `q8_0`, `q5_k_m`, or similar, always given in lowercase) and contain a quantization specification object with the following properties:
+The `Quantizations` characteristic is a JavaScript object whose properties are named by an available quantization (such as `q8_0`, `q5_k_m`, or similar, always given in lowercase) and contain a quantization specification object with the following properties:
 
 * **`Quantization`** - mandatorially contains the described quantization (which is also used as the key for this object)
 * **`FileURL`** - mandatorially contains the URL where the described quantization may be downloaded
