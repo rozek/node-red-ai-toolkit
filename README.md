@@ -77,6 +77,254 @@ The toolkit currently consists of the following nodes:
 * **process_ui_request** - processes an incoming (text or chat) completion  request from the UI
 * **process_ui_cancellation** - processes an incoming completion cancellation request from the UI
 
+### configure_toolkit ###
+
+(t.b.w.)
+
+### list_configuration ###
+
+(t.b.w.)
+
+### check_for_toolkit_updates ###
+
+(t.b.w.)
+
+### check_for_model_updates ###
+
+(t.b.w.)
+
+### update_known_models ###
+
+(t.b.w.)
+
+### list_known_models ###
+
+(t.b.w.)
+
+### list_available_models ###
+
+(t.b.w.)
+
+### list_pending_models ###
+
+(t.b.w.)
+
+### learn_model ###
+
+(t.b.w.)
+
+### unlearn_model ###
+
+(t.b.w.)
+
+### download_file ###
+
+(t.b.w.)
+
+### cancel_download ###
+
+(t.b.w.)
+
+### format_prompt ###
+
+(t.b.w.)
+
+### complete_text ###
+
+(t.b.w.)
+
+### complete_chat ###
+
+(t.b.w.)
+
+### tokenize_text ###
+
+(t.b.w.)
+
+### calculate_embedding ###
+
+(t.b.w.)
+
+### detect_language ###
+
+(t.b.w.)
+
+### translate_language ###
+
+(t.b.w.)
+
+### split_text ###
+
+(t.b.w.)
+
+### assemble_text ###
+
+(t.b.w.)
+
+### summarize_text ###
+
+(t.b.w.)
+
+### [try_to_]extract_search_string_from_text ###
+
+(t.b.w.)
+
+### [try_to_]extract_decision_from_text ###
+
+(t.b.w.)
+
+### [try_to_]extract_[json]_list_from_text ###
+
+(t.b.w.)
+
+### [try_to_]extract_response_from_text ###
+
+(t.b.w.)
+
+### generate_function ###
+
+(t.b.w.)
+
+### evaluate_function ###
+
+(t.b.w.)
+
+### load_key_store ###
+
+(t.b.w.)
+
+### patch_key_store ###
+
+(t.b.w.)
+
+### save_key_store ###
+
+(t.b.w.)
+
+### list_in_key_store ###
+
+(t.b.w.)
+
+### get_from_key_store ###
+
+(t.b.w.)
+
+### put_to_key_store ###
+
+(t.b.w.)
+
+### find_in_key_store ###
+
+(t.b.w.)
+
+### remove_from_key_store ###
+
+(t.b.w.)
+
+### load_vector_store ###
+
+(t.b.w.)
+
+### patch_vector_store ###
+
+(t.b.w.)
+
+### save_vector_store ###
+
+(t.b.w.)
+
+### list_in_vector_store ###
+
+(t.b.w.)
+
+### get_from_vector_store ###
+
+(t.b.w.)
+
+### put_to_vector_store ###
+
+(t.b.w.)
+
+### find_in_vector_store ###
+
+(t.b.w.)
+
+### locate_in_vector_store ###
+
+(t.b.w.)
+
+### remove_from_vector_store ###
+
+(t.b.w.)
+
+### send_ui_reset ###
+
+(t.b.w.)
+
+### send_ui_state ###
+
+(t.b.w.)
+
+### send_ui_data ###
+
+(t.b.w.)
+
+### send_ui_known_model_list ###
+
+(t.b.w.)
+
+### send_ui_available_model_list ###
+
+(t.b.w.)
+
+### send_ui_download_progress ###
+
+(t.b.w.)
+
+### send_ui_notice ###
+
+(t.b.w.)
+
+### send_ui_message_list ###
+
+(t.b.w.)
+
+### send_ui_progress ###
+
+(t.b.w.)
+
+### send_ui_data_request ###
+
+(t.b.w.)
+
+### send_ui_response ###
+
+(t.b.w.)
+
+### process_ui_model_choice ###
+
+(t.b.w.)
+
+### process_ui_download_continuation ###
+
+(t.b.w.)
+
+### process_ui_download_cancellation ###
+
+(t.b.w.)
+
+### process_ui_data_response ###
+
+(t.b.w.)
+
+### process_ui_request ###
+
+(t.b.w.)
+
+### process_ui_cancellation ###
+
+(t.b.w.)
+
 
 
 
