@@ -96,7 +96,7 @@ The toolkit currently consists of the following nodes:
 
 ### configure_toolkit ###
 
-This node can be used to configure the Node-RED AI Toolkit according to your specific needs. Uusually, it is invoked upon node deployment (or at server startup) and then never used again
+This node can be used to configure the Node-RED AI Toolkit according to your specific needs. Usually, it is invoked upon node deployment (or at server startup) and then never used again
 
 (t.b.w.)
 
