@@ -4,7 +4,7 @@ a collection of Node-RED nodes and flows for interactive low-code development of
 applications using AI technologies - free of charge and even for beginners or 
 casual programmers
 
-[![node-red-ai-toolkit preview video](https://img.youtube.com/vi/f86t-BBy_rY/0.jpg)](https://www.youtube.com/watch?v=f86t-BBy_rY)
+[![node-red-ai-toolkit preview video](https://img.youtube.com/vi/f86t-BBy_rY/hqdefault.jpg)](https://www.youtube.com/watch?v=f86t-BBy_rY)<br>(click the image to see a short preview video)
 
 > **Important**: this toolkit is currently being developed very actively. After the first hectic "quick preview" for the Backdrop Builders Contest, development is now back on the usual, more careful path. Please be patient until before Christmas when a practically usable version should be released
 
