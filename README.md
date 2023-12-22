@@ -77,13 +77,28 @@ Afterwards, copy the executable `./bin/gpt-neox` into the Node-RED "User Directo
 
 While the Node-RED AI Toolkit itself does not need any UI frontend, there are a few examples for the toolkit which do. For that reason, it may be a good idea to [install the UIBuilder nodes as described in their documentation](https://totallyinformation.github.io/node-red-contrib-uibuilder/#/walkthrough1?id=how-to-get-started-4-steps-to-a-data-driven-web-app).
 
-### AI Toolkit Flows ###
+### Language Models ###
 
-Now import the contents of file [AI-Toolkit-Flows.json](https://raw.githubusercontent.com/rozek/node-red-ai-toolkit/master/AI-Toolkit-Flows.json) - preferably into a new Node-RD workflow.
+You should now choose one or multiple language models and download them as described in their repositories (you _may_ also import the flows for the chosen LLMs, but don't have to):
 
-### Models ###
+* [Dans-TotSirocco-7B](https://github.com/rozek/node-red-flow-dans-totsirocco-7b)
+* [StableLM-3B-4E1T](https://github.com/rozek/node-red-flow-stablelm-3b-4e1t)
+* [StableCode-Completion-Alpha-3B-4K](https://github.com/rozek/node-red-flow-stablecode-completion-alpha-3b-4k)
 
-t.b.w.
+In principle, any LLaMA.cpp compatible model should work, a nice choice could also be
+
+* [42dot_LLM-SFT-1.3B](https://huggingface.co/rozek/42dot_LLM-SFT-1.3B_GGUF) (use the Q8_0 quantization)
+
+## Toolkit Flows ##
+
+Finally import the contents of file [AI-Toolkit-Flows.json](https://raw.githubusercontent.com/rozek/node-red-ai-toolkit/master/AI-Toolkit-Flows.json) into a new worksheet.
+
+After deployment, you may change the internals of the "configure" flow, redeploy and use any of the "Convenience Functions for Inpsection and Test" to play with the already existing nodes.
+
+
+
+
+t.b.c.
 
 ## Nodes and Interfaces ##
 
