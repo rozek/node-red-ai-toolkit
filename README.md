@@ -10,6 +10,14 @@ casual programmers
 
 > Just a small note: if you like this module and plan to use it, consider "starring" this repository (you will find the "Star" button on the top right of this page), so that I know which of my repositories to take most care of.
 
+## Examples ##
+
+Right now, there are three small examples which demonstrate the power of this toolkit and illustrate the usage of its node:
+
+* [Node-RED AI Playground](https://github.com/rozek/node-red-ai-playground) - a simple "playground" that let's you experiment with a language model
+* [Node-RED AI Chatbot](https://github.com/rozek/node-red-ai-chatbot) - a simple chatbot
+* [Node-RED AI Web Search](https://github.com/rozek/node-red-ai-web-search) - a simple "AI-assisted Web Search" which searches the web and analyzes any search results in order to answer a given request (not from the language model's internal knowledge but from external resources)
+
 ## Installation ##
 
 This section shows you how to install Node.js, Node-RED, LLaMA.cpp, GGML and the flows from this repository - feel free to skip the steps for those components you already installed before.
