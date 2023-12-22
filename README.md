@@ -770,67 +770,6 @@ For deployment, you may replace the web server from one of the above examples by
 
 * [node-red-within-express](https://github.com/rozek/node-red-within-express) - an HTTP(S) server with embedded Node-RED instance
 
-## Installation ##
-
-This section shows you how to install Node.js, Node-RED, LLaMA.cpp and the flows from this repository - feel free to skip the steps for those components you already installed before.
-
-### Node.js ###
-
-"_[Node.js](https://nodejs.org/en) is a cross-platform, open-source server environment that can run on Windows, Linux, Unix, macOS, and more. Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser._" (according to [Wikipedia](https://en.wikipedia.org/wiki/Node.js))
-
-Start by [installing Node.js](https://nodejs.org/en) as described on their web page.
-
-### Node-RED ###
-
-"_[Node-RED](https://nodered.org/) is a flow-based, low-code development tool for visual programming developed originally by IBM..._" (according to [Wikipedia](https://en.wikipedia.org/wiki/Node-RED))
-
-If not already done, install Node-RED as described on their "[Get Started](https://nodered.org/#get-started)" page.
-
-### LLaMA.cpp ###
-
-[LLaMA.cpp](https://github.com/ggerganov/llama.cpp) is a port of Facebook's LLaMA model in C/C++ (don't be fooled by the statement that the "_main goal of llama.cpp is to run the LLaMA model using 4-bit integer quantization on a MacBook_" - LLaMA.cpp runs just as well under Windows and Linux, and with different quantizations)
-
-> Note: please use my own fork of the original LLaMA.cpp as the code in there raises the context limit and contains additional functions for tokenization - however, if you are fine with a context length of up to 4096 tokens and don't want to tokenize any prompts, the original code will work as fine
-
-Get the code as follows:
-
-```
-git https://github.com/rozek/llama.cpp
-cd llama.cpp
-```
-
-Then continue as described in the [LLaMA.cpp docs](https://github.com/rozek/llama.cpp#build)
-
-Afterwards, rename the executables
-
-* `main` to `llama`,
-* `tokenization` to `llama-tokens` and
-* `embedding` to `llama-embeddings`
-
-and copy them into the Node-RED "User Directory" (by default, this folder is located at `$HOME/.node-red`).
-
-### Language Models ###
-
-You should now choose one or multiple language models and download them as described in their repositories (you _may_ als import the flows for the chosen LLMs, but don't have to):
-
-* [Dans-TotSirocco-7B](https://github.com/rozek/node-red-flow-dans-totsirocco-7b)
-* [StableLM-3B-4E1T](https://github.com/rozek/node-red-flow-stablelm-3b-4e1t)
-* [StableCode-Completion-Alpha-3B-4K](https://github.com/rozek/node-red-flow-stablecode-completion-alpha-3b-4k)
-
-In principle, any LLaMA.cpp compatible model should work, a nice choice could also be
-
-* [42dot_LLM-SFT-1.3B](https://huggingface.co/rozek/42dot_LLM-SFT-1.3B_GGUF) (use the Q8_0 quantization)
-
-## Toolkit Flows ##
-
-Finally import the contents of file [](https://raw.githubusercontent.com/rozek/node-red-ai-toolkit/master/Toolkit-Flows.json) into a new worksheet.
-
-After deployment, you may change the internals of the "configure" flow, redeploy and use any of the "Convenience Functions for Inpsection and Test" to play with the already existing nodes.
-
-## Chatbot Example ##
-
-For a small demonstrator, you may import the flows of a [node-red-uibilder-chatbot](https://github.com/rozek/node-red-uibilder-chatbot)
-
 ## License ##
 
 [MIT License](LICENSE.md)
