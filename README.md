@@ -11,7 +11,7 @@ casual programmers
 Next steps:
 
 - Version Management: check for toolkit and model updates programmatically
-- Model Catalog: choose from a set of already tested, automatically downloadable AI models with optimized model-specific prompts for the various use cases this toolkit covers - or add your oen models
+- Model Catalog: choose from a set of already tested, automatically downloadable AI models with optimized model-specific prompts for the various use cases this toolkit covers - or add your own models
 - Tool Store: enhance your AI agents with additional "tools". Use tools that come with this toolkit or add your own
 - Recipe Store: direct your AI agents with "recipes" that tell it how to solve well-known problems (rather than deciding on its own) to make it more robust. Use recipes that come with this toolkit or add your own
 - Key-Value and Vector Stores: add your own extensible knowledge database and let your AI agent scan that first before searching the web 
