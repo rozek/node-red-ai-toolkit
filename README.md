@@ -14,7 +14,8 @@ Next steps:
 - Model Catalog: choose from a set of already tested, automatically downloadable AI models with optimized model-specific prompts for the various use cases this toolkit covers - or add your own models
 - Tool Store: enhance your AI agents with additional "tools". Use tools that come with this toolkit or add your own
 - Recipe Store: direct your AI agents with "recipes" that tell it how to solve well-known problems (rather than deciding on its own) to make it more robust. Use recipes that come with this toolkit or add your own
-- Key-Value and Vector Stores: add your own extensible knowledge database and let your AI agent scan that first before searching the web 
+- Key-Value and Vector Stores: add your own extensible knowledge database and let your AI agent scan that first before searching the web
+- simplified installation: right now, installation requires many steps snd is far from being simple. As soon as the toolkit has some degree of function completeness, the idea is to provide an "installer" which guides users through that process
 
 > Just a small note: if you like this module and plan to use it, consider "starring" this repository (you will find the "Star" button on the top right of this page), so that I know which of my repositories to take most care of.
 
