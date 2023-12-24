@@ -20,7 +20,7 @@ Next steps:
 
 ## Examples ##
 
-Right now, there are three small examples which demonstrate the power of this toolkit and illustrate the usage of its node:
+Right now, there are three small examples which demonstrate the power of this toolkit and illustrate the usage of its nodes:
 
 * [Node-RED AI Playground](https://github.com/rozek/node-red-ai-playground) - a simple "playground" that let's you experiment with a language model
 * [Node-RED AI Chatbot](https://github.com/rozek/node-red-ai-chatbot) - a simple chatbot
