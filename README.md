@@ -6,7 +6,7 @@ casual programmers
 
 [![node-red-ai-toolkit preview video](https://img.youtube.com/vi/f86t-BBy_rY/hqdefault.jpg)](https://www.youtube.com/watch?v=f86t-BBy_rY)<br>(click the image to see a short preview video)
 
-> **Important**: this toolkit is currently being developed very actively. After the first hectic "quick preview" for the Backdrop Builders Contest, development is now back on the usual, more careful path. Please be patient until mid of January 2024 when a stable version should be released - expect many updates until then, some may even introduce breaking changes
+> **Important**: this toolkit is currently being developed very actively. After the first hectic "quick preview" for the Backdrop Builders Contest, development is now back on the usual, more careful path. Please be patient until midth of January 2024 when a stable version should be released - expect many updates until then, some may even introduce breaking changes
 
 Next steps:
 
