@@ -8,6 +8,14 @@ casual programmers
 
 > **Important**: this toolkit is currently being developed very actively. After the first hectic "quick preview" for the Backdrop Builders Contest, development is now back on the usual, more careful path. Please be patient until mid of January 2024 when a stable version should be released - expect many updates until then, some may even introduce breaking changes
 
+Next steps:
+
+- Version Management: check for toolkit and model updates programmatically
+- Model Catalog: choose from a set of already tested, automatically downloadable AI models with optimized model-specific prompts for the various use cases this toolkit covers - or add your oen models
+- Tool Store: enhance your AI agents with additional "tools". Use tools that come with this toolkit or add your own
+- Recipe Store: direct your AI agents with "recipes" that tell it how to solve well-known problems (rather than deciding on its own) to make it more robust. Use recipes that come with this toolkit or add your own
+- Key-Value and Vector Stores: add your own extensible knowledge database and let your AI agent scan that first before searching the web 
+
 > Just a small note: if you like this module and plan to use it, consider "starring" this repository (you will find the "Star" button on the top right of this page), so that I know which of my repositories to take most care of.
 
 ## Examples ##
