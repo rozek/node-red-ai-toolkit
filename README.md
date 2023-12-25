@@ -119,7 +119,7 @@ The AI Toolkit consist of two major parts:
 
 If you just want to use the existing nodes, you may safely ignore the first part. However, the internal methods will become handy as soon as you plan to implement your own (function) nodes which interact with those from the toolkit.
 
-## Internal Methods ##
+### Internal Methods ###
 
 The internal methods of the AI Toolkit were implemented as static methods of a JavaScript class and then stored in the global Node-RED context. Typically, you get access to these methods as follows:
 
