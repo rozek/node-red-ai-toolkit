@@ -99,7 +99,7 @@ In principle, any LLaMA.cpp compatible model should work, a nice choice could al
 
 * [42dot_LLM-SFT-1.3B](https://huggingface.co/rozek/42dot_LLM-SFT-1.3B_GGUF) (use the Q8_0 quantization)
 
-## Toolkit Flows ##
+### Toolkit Flows ###
 
 Finally import the contents of file [AI-Toolkit-Flows.json](https://raw.githubusercontent.com/rozek/node-red-ai-toolkit/master/AI-Toolkit-Flows.json) into a new worksheet.
 
@@ -109,6 +109,85 @@ After deployment, you may change the internals of the "configure" flow, redeploy
 
 
 t.b.c.
+
+## Reference Manual ##
+
+The AI Toolkit consist of two major parts:
+
+* a set of internal JavaScript methods and
+* a set of Node-RED nodes built upon these methods.
+
+If you just want to use the existing nodes, you may safely ignore the first part. However, the internal methods will become handy as soon as you plan to implement your own (function) nodes which interact with those from the toolkit.
+
+## Internal Methods ##
+
+The internal methods of the AI Toolkit were implemented as static methods of a JavaScript class and then stored in the global Node-RED context. Typically, you get access to these methods as follows:
+
+```javascript
+const {
+  acceptableString, OptionsFrom, CompletionOfText
+} = global.get('AI-Toolkit-commonCode')
+```
+
+Many of these methods (albeit not all) run asynchronously. As a consequence, within your own Node-RED function node, you should write asynchronous code in a manner similar to
+
+```javascript
+const { ... } = global.get('AI-Toolkit-commonCode')
+
+;(async function () {
+  ... insert your asynchronous code here - don't forget "await"
+})()
+```
+
+If you decide to mimic the design of most Toolkit nodes and provide two outputs (one for successful runs and one for failures), you may add the following `try-catch` statement
+
+```javascript
+const { ... } = global.get('AI-Toolkit-commonCode')
+
+;(async function () {
+  try {
+    ... insert your asynchronous code here - don't forget "await"
+
+    node.send([msg,null]) // for a successful run
+    node.done()
+  } catch (Signal) {
+    msg.statusCode = Signal.StatusCode || 500
+    msg.payload    = Signal.message    || ''
+
+    node.send([null,msg]) // for failures
+    node.done()
+  }
+})()
+```
+
+Finally, it may be helpful for demonstrations and error tracking to change a node's status while running:
+
+```javascript
+const { ... } = global.get('AI-Toolkit-commonCode')
+
+;(async function () {
+  node.status({ fill: 'yellow', shape: 'ring', text: 'running' })
+  try {
+    ... insert your asynchronous code here - don't forget "await"
+
+    node.status({ fill: 'green', shape: 'dot', text: 'finished' })
+
+    node.send([msg,null]) // for a successful run
+    node.done()
+  } catch (Signal) {
+    msg.statusCode = Signal.StatusCode || 500
+    msg.payload    = Signal.message    || ''
+
+    node.status({ fill: 'red', shape: 'dot', text: 'ExitCode = ' + (Signal.StatusCode || 'unknown') })
+
+    node.send([null,msg]) // for failures
+    node.done()
+  }
+})()
+```
+
+
+
 
 ## Nodes and Interfaces ##
 
