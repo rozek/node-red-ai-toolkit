@@ -112,10 +112,10 @@ t.b.c.
 
 ## Reference Manual ##
 
-The AI Toolkit consist of two major parts:
+The AI Toolkit consists of two major parts:
 
 * a set of internal JavaScript methods and
-* a set of Node-RED nodes built upon these methods.
+* a set of Node-RED nodes built on top of these methods.
 
 If you just want to use the existing nodes, you may safely ignore the first part. However, the internal methods will become handy as soon as you plan to implement your own (function) nodes which interact with those from the toolkit.
 
