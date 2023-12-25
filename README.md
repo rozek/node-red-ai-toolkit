@@ -103,7 +103,7 @@ In principle, any LLaMA.cpp compatible model should work, a nice choice could al
 
 Finally import the contents of file [AI-Toolkit-Flows.json](https://raw.githubusercontent.com/rozek/node-red-ai-toolkit/master/AI-Toolkit-Flows.json) into a new worksheet.
 
-After deployment, you may change the internals of the "configure" flow, redeploy and use any of the "Convenience Functions for Inpsection and Test" to play with the already existing nodes.
+After deployment, you may change the internals of the "configure" flow, redeploy and use any of the "Convenience Functions for Inspection and Test" to play with the already existing nodes.
 
 
 
