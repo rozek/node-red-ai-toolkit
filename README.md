@@ -27,6 +27,8 @@ Right now, there are three small examples which demonstrate the power of this to
 * [Node-RED AI Playground](https://github.com/rozek/node-red-ai-playground) - a simple "playground" that let's you experiment with a language model
 * [Node-RED AI Chatbot](https://github.com/rozek/node-red-ai-chatbot) - a simple chatbot
 * [Node-RED AI Web Search](https://github.com/rozek/node-red-ai-web-search) - a simple "AI-assisted Web Search" which searches the web and analyzes any search results in order to answer a given request (not from the language model's internal knowledge but from external resources)
+* ("Chain-of-Thought" example pending)
+* ("Tree-of-Thought" example pending)
 
 ## Installation ##
 
