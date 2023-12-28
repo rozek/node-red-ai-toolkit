@@ -190,7 +190,7 @@
     "DocumentationURL":"https://arxiv.org/pdf/2309.11235.pdf",
 
     "Architecture":"llama",
-    "Parameters":  3,
+    "Parameters":  7,
 
     "Purposes":      ["text","phrasing","code","embeddings"],
     "ContextLength": 8192,
@@ -225,7 +225,7 @@
     "DocumentationURL":"https://arxiv.org/pdf/2309.11235.pdf",
 
     "Architecture":"llama",
-    "Parameters":  3,
+    "Parameters":  7,
 
     "Purposes":      ["text","embeddings"],
     "ContextLength": 8192,
@@ -235,6 +235,40 @@
       "Prefix":"${System}",
       "Infix": "Math Correct User: ${User}<|end_of_turn|>Math Correct Assistant: ${Content}<|end_of_turn|>",
       "Suffix":"Math Correct User: ${User}<|end_of_turn|>Math Correct Assistant: "
+    },
+
+    "JobTemplates":{
+    },
+
+    "License":   "Apache 2.0",
+    "LicenseURL":"https://www.apache.org/licenses/LICENSE-2.0"
+  },
+
+  "dans-totsirocco-7b":{
+    "Model":   "Dans-TotSirocco-7B",
+    "ModelURL":"https://huggingface.co/PocketDoc/Dans-TotSirocco-7b",
+
+    "DownloadURLs":{
+      "Q4_K_M":"https://huggingface.co/TheBloke/Dans-TotSirocco-7B-GGUF/blob/main/dans-totsirocco-7b.Q4_K_M.gguf",
+      "Q5_K_M":"https://huggingface.co/TheBloke/Dans-TotSirocco-7B-GGUF/blob/main/dans-totsirocco-7b.Q5_K_M.gguf",
+      "Q6_K":  "https://huggingface.co/TheBloke/Dans-TotSirocco-7B-GGUF/blob/main/dans-totsirocco-7b.Q6_K.gguf",
+      "Q8_0":  "https://huggingface.co/TheBloke/Dans-TotSirocco-7B-GGUF/blob/main/dans-totsirocco-7b.Q8_0.gguf"
+    },
+
+    "Creator":   "PocketDoc Labs",
+    "CreatorURL":"https://huggingface.co/PocketDoc",
+
+    "Architecture":"llama",
+    "Parameters":  7,
+
+    "Purposes":      ["text","phrasing","embeddings"],
+    "ContextLength": 4096,
+    "ReversePrompts":[""],
+
+    "ChatTemplate":{
+      "Prefix":"<|system|>${System}",
+      "Infix": "<|user|>${User}<|model|>${Assistant}",
+      "Suffix":"<|user|>${User}<|model|>"
     },
 
     "JobTemplates":{
