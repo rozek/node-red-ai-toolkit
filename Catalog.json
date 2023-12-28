@@ -25,7 +25,7 @@
     "ChatTemplate":{
       "Prefix":"${System}\n",
       "Infix": "<human>: ${User}\n<bot>:${Assistant}\n",
-      "Suffix":"<bot>:"
+      "Suffix":"<human>: ${User}\n<bot>:"
     },
 
     "JobTemplates":{
@@ -61,7 +61,7 @@
     "ChatTemplate":{
       "Prefix":"${System}\n",
       "Infix": "${User}\n[COMPLETION START]\n${Assistant}\n[COMPLETION END]\n",
-      "Suffix":"[COMPLETION START]\n"
+      "Suffix":"${User}\n[COMPLETION START]\n"
     },
 
     "JobTemplates":{
@@ -96,7 +96,7 @@
     "ChatTemplate":{
       "Prefix":"${System}\n",
       "Infix": "<|user|>\n${User}\n<|assistant|>\n${Assistant}\n",
-      "Suffix":"<|assistant|>\n"
+      "Suffix":"<|user|>\n${User}\n<|assistant|>\n"
     },
 
     "JobTemplates":{
@@ -104,6 +104,74 @@
 
     "License":   "StabilityAI Non-Commercial Research Community License",
     "LicenseURL":"https://huggingface.co/stabilityai/stablelm-zephyr-3b/raw/main/LICENSE"
+  },
+
+  "stablecode-completion-alpha-3b-4k":{
+    "Model":   "StableCode-Completion-Alpha-3B-4K",
+    "ModelURL":"https://huggingface.co/stabilityai/stablecode-completion-alpha-3b-4k",
+
+    "DownloadURLs":{
+      "Q4_0":"https://huggingface.co/TheBloke/stablecode-completion-alpha-3b-4k-GGML/blob/main/stablecode-completion-alpha-3b-4k.ggmlv1.q4_0.bin",
+      "Q5_0":"https://huggingface.co/TheBloke/stablecode-completion-alpha-3b-4k-GGML/blob/main/stablecode-completion-alpha-3b-4k.ggmlv1.q5_0.bin",
+      "Q8_0":"https://huggingface.co/TheBloke/stablecode-completion-alpha-3b-4k-GGML/blob/main/stablecode-completion-alpha-3b-4k.ggmlv1.q8_0.bin"
+    },
+
+    "Creator":   "Stability AI",
+    "CreatorURL":"https://huggingface.co/stabilityai",
+
+    "Architecture":"gptneox",
+    "Parameters":  3,
+
+    "Purposes":      ["code"],
+    "ContextLength": 4096,
+    "ReversePrompts":[],
+
+    "ChatTemplate":{
+      "Prefix":"${System}\n",
+      "Infix": "${User}\n${Assistant}\n",
+      "Suffix":"${User}\n"
+    },
+
+    "JobTemplates":{
+    },
+
+    "License":   "Apache 2.0",
+    "LicenseURL":"https://www.apache.org/licenses/LICENSE-2.0"
+  },
+
+  "minichat-1.5-3b":{
+    "Model":   "MiniChat-1.5-3B",
+    "ModelURL":"https://huggingface.co/GeneZC/MiniChat-1.5-3B",
+
+    "DownloadURLs":{
+      "Q4_K_M":"https://huggingface.co/afrideva/MiniChat-1.5-3B-GGUF/resolve/main/minichat-1.5-3b.q4_k_m.gguf",
+      "Q5_K_M":"https://huggingface.co/afrideva/MiniChat-1.5-3B-GGUF/resolve/main/minichat-1.5-3b.q5_k_m.gguf",
+      "Q6_K":  "https://huggingface.co/afrideva/MiniChat-1.5-3B-GGUF/resolve/main/minichat-1.5-3b.q6_k.gguf",
+      "Q8_0":  "https://huggingface.co/afrideva/MiniChat-1.5-3B-GGUF/resolve/main/minichat-1.5-3b.q8_0.gguf"
+    },
+
+    "Creator":   "Chen Zhang",
+    "CreatorURL":"https://huggingface.co/GeneZC",
+    "DocumentationURL": "https://github.com/GeneZC/MiniMA",
+
+    "Architecture":"llama",
+    "Parameters":  3,
+
+    "Purposes":      ["phrasing","embeddings"],
+    "ContextLength": 4096,
+    "ReversePrompts":[],
+
+    "ChatTemplate":{
+      "Prefix":"${System\n}",
+      "Infix": "<s> [|User|] ${User}</s>[|Assistant|] ${Assistant} ",
+      "Suffix":"<s> [|User|] ${User}</s>[|Assistant|] "
+    },
+
+    "JobTemplates":{
+    },
+
+    "License":   "Apache 2.0",
+    "LicenseURL":"https://www.apache.org/licenses/LICENSE-2.0"
   }
 
 
