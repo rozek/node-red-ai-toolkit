@@ -47,9 +47,9 @@
       "Q8_K":  "https://huggingface.co/rozek/StableLM-3B-4E1T_GGUF/blob/main/stablelm-3b-4e1t-Q8_K.bin"
     },
 
-    "Creator":   "Stability AI",
-    "CreatorURL":"https://huggingface.co/stabilityai",
-    "DocumentationURL": "https://stability.wandb.io/stability-llm/stable-lm/reports/StableLM-3B-4E1T--VmlldzoyMjU4?accessToken=u3zujipenkx5g7rtcj9qojjgxpconyjktjkli2po09nffrffdhhchq045vp0wyfo",
+    "Creator":         "Stability AI",
+    "CreatorURL":      "https://huggingface.co/stabilityai",
+    "DocumentationURL":"https://stability.wandb.io/stability-llm/stable-lm/reports/StableLM-3B-4E1T--VmlldzoyMjU4?accessToken=u3zujipenkx5g7rtcj9qojjgxpconyjktjkli2po09nffrffdhhchq045vp0wyfo",
 
     "Architecture":"stablelm",
     "Parameters":  3,
@@ -82,9 +82,9 @@
       "Q8_K":  "https://huggingface.co/TheBloke/stablelm-zephyr-3b-GGUF/blob/main/stablelm-zephyr-3b.Q8_0.gguf"
     },
 
-    "Creator":   "Stability AI",
-    "CreatorURL":"https://huggingface.co/stabilityai",
-    "DocumentationURL": "https://stability.ai/news/stablelm-zephyr-3b-stability-llm",
+    "Creator":         "Stability AI",
+    "CreatorURL":      "https://huggingface.co/stabilityai",
+    "DocumentationURL":"https://stability.ai/news/stablelm-zephyr-3b-stability-llm",
 
     "Architecture":"stablelm",
     "Parameters":  3,
@@ -150,9 +150,9 @@
       "Q8_0":  "https://huggingface.co/afrideva/MiniChat-1.5-3B-GGUF/resolve/main/minichat-1.5-3b.q8_0.gguf"
     },
 
-    "Creator":   "Chen Zhang",
-    "CreatorURL":"https://huggingface.co/GeneZC",
-    "DocumentationURL": "https://github.com/GeneZC/MiniMA",
+    "Creator":         "Chen Zhang",
+    "CreatorURL":      "https://huggingface.co/GeneZC",
+    "DocumentationURL":"https://github.com/GeneZC/MiniMA",
 
     "Architecture":"llama",
     "Parameters":  3,
@@ -165,6 +165,76 @@
       "Prefix":"${System\n}",
       "Infix": "<s> [|User|] ${User}</s>[|Assistant|] ${Assistant} ",
       "Suffix":"<s> [|User|] ${User}</s>[|Assistant|] "
+    },
+
+    "JobTemplates":{
+    },
+
+    "License":   "Apache 2.0",
+    "LicenseURL":"https://www.apache.org/licenses/LICENSE-2.0"
+  },
+
+  "openchat-3.5-1210":{
+    "Model":   "OpenChat-3.5-1210",
+    "ModelURL":"https://huggingface.co/openchat/openchat-3.5-1210",
+
+    "DownloadURLs":{
+      "Q4_K_M":"https://huggingface.co/TheBloke/openchat-3.5-1210-GGUF/blob/main/openchat-3.5-1210.Q4_K_M.gguf",
+      "Q5_K_M":"https://huggingface.co/TheBloke/openchat-3.5-1210-GGUF/blob/main/openchat-3.5-1210.Q5_K_M.gguf",
+      "Q6_K":  "https://huggingface.co/TheBloke/openchat-3.5-1210-GGUF/blob/main/openchat-3.5-1210.Q6_K.gguf",
+      "Q8_0":  "https://huggingface.co/TheBloke/openchat-3.5-1210-GGUF/blob/main/openchat-3.5-1210.Q8_0.gguf"
+    },
+
+    "Creator":         "OpenChat",
+    "CreatorURL":      "https://github.com/imoneoi/openchat",
+    "DocumentationURL":"https://arxiv.org/pdf/2309.11235.pdf",
+
+    "Architecture":"llama",
+    "Parameters":  3,
+
+    "Purposes":      ["text","phrasing","code","embeddings"],
+    "ContextLength": 8192,
+    "ReversePrompts":[],
+
+    "ChatTemplate":{
+      "Prefix":"${System}",
+      "Infix": "GPT4 Correct User: ${User}<|end_of_turn|>GPT4 Correct Assistant: ${Content}<|end_of_turn|>",
+      "Suffix":"GPT4 Correct User: ${User}<|end_of_turn|>GPT4 Correct Assistant: "
+    },
+
+    "JobTemplates":{
+    },
+
+    "License":   "Apache 2.0",
+    "LicenseURL":"https://www.apache.org/licenses/LICENSE-2.0"
+  },
+
+  "openchat-3.5-1210-math":{
+    "Model":   "OpenChat-3.5-1210-Math",
+    "ModelURL":"https://huggingface.co/openchat/openchat-3.5-1210",
+
+    "DownloadURLs":{
+      "Q4_K_M":"https://huggingface.co/TheBloke/openchat-3.5-1210-GGUF/blob/main/openchat-3.5-1210.Q4_K_M.gguf",
+      "Q5_K_M":"https://huggingface.co/TheBloke/openchat-3.5-1210-GGUF/blob/main/openchat-3.5-1210.Q5_K_M.gguf",
+      "Q6_K":  "https://huggingface.co/TheBloke/openchat-3.5-1210-GGUF/blob/main/openchat-3.5-1210.Q6_K.gguf",
+      "Q8_0":  "https://huggingface.co/TheBloke/openchat-3.5-1210-GGUF/blob/main/openchat-3.5-1210.Q8_0.gguf"
+    },
+
+    "Creator":         "OpenChat",
+    "CreatorURL":      "https://github.com/imoneoi/openchat",
+    "DocumentationURL":"https://arxiv.org/pdf/2309.11235.pdf",
+
+    "Architecture":"llama",
+    "Parameters":  3,
+
+    "Purposes":      ["text","embeddings"],
+    "ContextLength": 8192,
+    "ReversePrompts":[],
+
+    "ChatTemplate":{
+      "Prefix":"${System}",
+      "Infix": "Math Correct User: ${User}<|end_of_turn|>Math Correct Assistant: ${Content}<|end_of_turn|>",
+      "Suffix":"Math Correct User: ${User}<|end_of_turn|>Math Correct Assistant: "
     },
 
     "JobTemplates":{
