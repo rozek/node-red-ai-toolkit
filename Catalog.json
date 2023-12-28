@@ -33,6 +33,39 @@
 
     "License":   "CC BY-NC 4.0",
     "LicenseURL":"https://creativecommons.org/licenses/by-nc/4.0/"
+  },
+
+  "stablelm-3b-4e1t":{
+    "Model":   "StableLM-3B-4E1T",
+    "ModelURL":"https://huggingface.co/stabilityai/stablelm-3b-4e1t",
+
+    "DownloadURLs":{
+      "Q8_0":""
+    },
+
+    "Creator":   "Stability AI",
+    "CreatorURL":"https://huggingface.co/stabilityai",
+    "DocumentationURL": "https://stability.wandb.io/stability-llm/stable-lm/reports/StableLM-3B-4E1T--VmlldzoyMjU4?accessToken=u3zujipenkx5g7rtcj9qojjgxpconyjktjkli2po09nffrffdhhchq045vp0wyfo",
+
+    "Architecture":"stablelm",
+    "Parameters":  3,
+
+    "Purposes":      ["phrasing","embeddings"],
+    "ContextLength": 4096,
+    "ReversePrompts":["[COMPLETION END]","[end of text]","<|endoftext|>"],
+
+    "ChatTemplate":{
+      "Prefix":"${System}\n",
+      "Infix": "${User}\n[COMPLETION START]\n${Assistant}\n[COMPLETION END]\n",
+      "Suffix":"[COMPLETION START]\n"
+    },
+
+    "JobTemplates":{
+    },
+
+    "License":   "CC BY-SA-4.0",
+    "LicenseURL":"https://creativecommons.org/licenses/by-sa/4.0/"
   }
+
 
 }
