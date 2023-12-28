@@ -312,5 +312,37 @@
     "LicenseURL":"https://www.apache.org/licenses/LICENSE-2.0"
   },
 
+  "tess-xs-v1-3-yarn-128k":{
+    "Model":   "Tess-XS-v1-3-yarn-128K",
+    "ModelURL":"https://huggingface.co/migtissera/Tess-XS-v1-3-yarn-128K",
+
+    "DownloadURLs":{
+      "Q8_0":"https://huggingface.co/eramax/Tess-XS-v1-3-yarn-128K-q8-gguf/blob/main/Tess-XS-v1-3-yarn-128K-q8_0.gguf"
+    },
+
+    "Creator":         "Migel Tissera",
+    "CreatorURL":      "https://huggingface.co/migtissera",
+    "DocumentationURL":"https://migel.substack.com/p/learnings-from-training-tess",
+
+    "Architecture":"llama",
+    "Parameters":  3,
+
+    "Purposes":      ["text","phrasing","embeddings"],
+    "ContextLength": 16384,
+    "ReversePrompts":[],
+
+    "ChatTemplate":{
+      "Prefix":"SYSTEM: ${Content}\n",
+      "Infix": "USER: ${Content}\nASSISTANT: ${Assistant}\n",
+      "Suffix":"USER: ${Content}\nASSISTANT: "
+    },
+
+    "JobTemplates":{
+    },
+
+    "License":   "Apache 2.0",
+    "LicenseURL":"https://www.apache.org/licenses/LICENSE-2.0"
+  }
+
 
 }
