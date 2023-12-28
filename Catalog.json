@@ -263,7 +263,7 @@
 
     "Purposes":      ["text","phrasing","embeddings"],
     "ContextLength": 4096,
-    "ReversePrompts":[""],
+    "ReversePrompts":[],
 
     "ChatTemplate":{
       "Prefix":"<|system|>${System}",
@@ -276,7 +276,41 @@
 
     "License":   "Apache 2.0",
     "LicenseURL":"https://www.apache.org/licenses/LICENSE-2.0"
-  }
+  },
+
+  "mistrallite":{
+    "Model":   "MistralLite",
+    "ModelURL":"https://huggingface.co/amazon/MistralLite",
+
+    "DownloadURLs":{
+      "Q4_K_M":"https://huggingface.co/TheBloke/MistralLite-7B-GGUF/blob/main/mistrallite.Q4_K_M.gguf",
+      "Q5_K_M":"https://huggingface.co/TheBloke/MistralLite-7B-GGUF/blob/main/mistrallite.Q5_K_M.gguf",
+      "Q6_K":  "https://huggingface.co/TheBloke/MistralLite-7B-GGUF/blob/main/mistrallite.Q6_K.gguf",
+      "Q8_0":  "https://huggingface.co/TheBloke/MistralLite-7B-GGUF/blob/main/mistrallite.Q8_0.gguf"
+    },
+
+    "Creator":         "Amazon Web Services",
+    "CreatorURL":      "https://huggingface.co/amazon",
+
+    "Architecture":"llama",
+    "Parameters":  7,
+
+    "Purposes":      ["text","phrasing","embeddings"],
+    "ContextLength": 32768,
+    "ReversePrompts":[],
+
+    "ChatTemplate":{
+      "Prefix":"${System}",
+      "Infix": "<|prompter|>${User}</s><|assistant|>${Assistant}",
+      "Suffix":"<|prompter|>${User}</s><|assistant|>"
+    },
+
+    "JobTemplates":{
+    },
+
+    "License":   "Apache 2.0",
+    "LicenseURL":"https://www.apache.org/licenses/LICENSE-2.0"
+  },
 
 
 }
