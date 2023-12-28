@@ -325,7 +325,7 @@
     "DocumentationURL":"https://migel.substack.com/p/learnings-from-training-tess",
 
     "Architecture":"llama",
-    "Parameters":  3,
+    "Parameters":  7,
 
     "Purposes":      ["text","phrasing","embeddings"],
     "ContextLength": 16384,
@@ -342,7 +342,40 @@
 
     "License":   "Apache 2.0",
     "LicenseURL":"https://www.apache.org/licenses/LICENSE-2.0"
+  },
+
+  "deepseek-coder-6.7b-instruct":{
+    "Model":   "DeepSeek-Coder-6.7b-Instruct",
+    "ModelURL":"https://huggingface.co/deepseek-ai/deepseek-coder-6.7b-instruct",
+
+    "DownloadURLs":{
+      "Q4_K_M":"https://huggingface.co/TheBloke/deepseek-coder-6.7B-instruct-GGUF/blob/main/deepseek-coder-6.7b-instruct.Q4_K_M.gguf",
+      "Q5_K_M":"https://huggingface.co/TheBloke/deepseek-coder-6.7B-instruct-GGUF/blob/main/deepseek-coder-6.7b-instruct.Q5_K_M.gguf",
+      "Q6_K":  "https://huggingface.co/TheBloke/deepseek-coder-6.7B-instruct-GGUF/blob/main/deepseek-coder-6.7b-instruct.Q6_K.gguf",
+      "Q8_0":  "https://huggingface.co/TheBloke/deepseek-coder-6.7B-instruct-GGUF/blob/main/deepseek-coder-6.7b-instruct.Q8_0.gguf"
+    },
+
+    "Creator":         "DeepSeek AI",
+    "CreatorURL":      "https://huggingface.co/deepseek-ai",
+    "DocumentationURL":"https://deepseekcoder.github.io/",
+
+    "Architecture":"llama",
+    "Parameters":  7,
+
+    "Purposes":      ["code"],
+    "ContextLength": 16384,
+    "ReversePrompts":["<|EOT|>","<｜end▁of▁sentence｜>"],
+
+    "ChatTemplate":{
+      "Prefix":"You are an AI programming assistant, utilizing the DeepSeek Coder model, developed by DeepSeek Company, and you only answer questions related to computer science. For politically sensitive questions, security and privacy issues, and other non-computer science questions, you will refuse to answer.\n",
+      "Infix": "### Instruction:\n${User}\n### Response:\n${Assistant}\n<|EOT|>\n",
+      "Suffix":"### Instruction:\n${User}\n### Response:\n"
+    },
+
+    "JobTemplates":{
+    },
+
+    "License":   "deepseek",
+    "LicenseURL":"https://github.com/deepseek-ai/deepseek-coder/blob/main/LICENSE-MODEL"
   }
-
-
 }
