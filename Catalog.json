@@ -40,7 +40,11 @@
     "ModelURL":"https://huggingface.co/stabilityai/stablelm-3b-4e1t",
 
     "DownloadURLs":{
-      "Q8_0":""
+      "Q3_K_M":"https://huggingface.co/rozek/StableLM-3B-4E1T_GGUF/blob/main/stablelm-3b-4e1t-Q3_K_M.bin",
+      "Q4_K_M":"https://huggingface.co/rozek/StableLM-3B-4E1T_GGUF/blob/main/stablelm-3b-4e1t-Q4_K_M.bin",
+      "Q5_K_M":"https://huggingface.co/rozek/StableLM-3B-4E1T_GGUF/blob/main/stablelm-3b-4e1t-Q5_K_M.bin",
+      "Q6_K":  "https://huggingface.co/rozek/StableLM-3B-4E1T_GGUF/blob/main/stablelm-3b-4e1t-Q6_K.bin",
+      "Q8_K":  "https://huggingface.co/rozek/StableLM-3B-4E1T_GGUF/blob/main/stablelm-3b-4e1t-Q8_K.bin"
     },
 
     "Creator":   "Stability AI",
@@ -65,6 +69,41 @@
 
     "License":   "CC BY-SA-4.0",
     "LicenseURL":"https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+
+  "stablelm-zephyr-3b":{
+    "Model":   "StableLM-Zephyr-3B",
+    "ModelURL":"https://huggingface.co/stabilityai/stablelm-zephyr-3b",
+
+    "DownloadURLs":{
+      "Q4_K_M":"https://huggingface.co/TheBloke/stablelm-zephyr-3b-GGUF/blob/main/stablelm-zephyr-3b.Q4_K_M.gguf",
+      "Q5_K_M":"https://huggingface.co/TheBloke/stablelm-zephyr-3b-GGUF/blob/main/stablelm-zephyr-3b.Q5_K_M.gguf",
+      "Q6_K":  "https://huggingface.co/TheBloke/stablelm-zephyr-3b-GGUF/blob/main/stablelm-zephyr-3b.Q6_K.gguf",
+      "Q8_K":  "https://huggingface.co/TheBloke/stablelm-zephyr-3b-GGUF/blob/main/stablelm-zephyr-3b.Q8_0.gguf"
+    },
+
+    "Creator":   "Stability AI",
+    "CreatorURL":"https://huggingface.co/stabilityai",
+    "DocumentationURL": "https://stability.ai/news/stablelm-zephyr-3b-stability-llm",
+
+    "Architecture":"stablelm",
+    "Parameters":  3,
+
+    "Purposes":      ["phrasing","embeddings"],
+    "ContextLength": 4096,
+    "ReversePrompts":["[end of text]","<|endoftext|>"],
+
+    "ChatTemplate":{
+      "Prefix":"${System}\n",
+      "Infix": "<|user|>\n${User}\n<|assistant|>\n${Assistant}\n",
+      "Suffix":"<|assistant|>\n"
+    },
+
+    "JobTemplates":{
+    },
+
+    "License":   "StabilityAI Non-Commercial Research Community License",
+    "LicenseURL":"https://huggingface.co/stabilityai/stablelm-zephyr-3b/raw/main/LICENSE"
   }
 
 
